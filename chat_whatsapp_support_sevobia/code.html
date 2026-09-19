@@ -1,0 +1,837 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-primary-fixed-variant": "#3a475c",
+        "on-tertiary": "#ffffff",
+        "secondary-fixed-dim": "#ffb694",
+        "on-primary": "#ffffff",
+        "secondary-container": "#ff6a00",
+        "surface-tint": "#525f75",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "surface-container-high": "#dce9ff",
+        "primary": "#000000",
+        "surface-bright": "#f8f9ff",
+        "tertiary": "#000000",
+        "on-secondary-container": "#571f00",
+        "on-secondary": "#ffffff",
+        "on-secondary-fixed": "#351000",
+        "on-primary-container": "#77849c",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-dim": "#cbdbf5",
+        "secondary": "#a14000",
+        "primary-fixed": "#d6e3fe",
+        "tertiary-fixed-dim": "#aac9f4",
+        "on-tertiary-fixed-variant": "#29486d",
+        "primary-fixed-dim": "#bac7e1",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-error-container": "#93000a",
+        "outline": "#75777d",
+        "on-surface": "#0b1c30",
+        "surface-container-highest": "#d3e4fe",
+        "tertiary-fixed": "#d3e4ff",
+        "on-tertiary-container": "#6886ae",
+        "inverse-surface": "#213145",
+        "on-secondary-fixed-variant": "#7b2f00",
+        "secondary-fixed": "#ffdbcc",
+        "primary-container": "#0e1c2f",
+        "on-primary-fixed": "#0e1c2f",
+        "outline-variant": "#c5c6cd",
+        "inverse-primary": "#bac7e1",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#001c38",
+        "on-surface-variant": "#44474c",
+        "surface-container": "#e5eeff",
+        "error": "#ba1a1a",
+        "tertiary-container": "#001c38",
+        "surface-variant": "#d3e4fe",
+        "surface": "#f8f9ff",
+        "on-error": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "margin": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "2.5rem",
+        "gutter-sm": "1rem",
+        "space-md": "1rem",
+        "margin-lg": "5rem",
+        "space-2xl": "4rem",
+        "gutter-lg": "2rem",
+        "margin-md": "3rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "body-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-xl-mobile": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-md": ["Inter"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "label-caps": ["Inter"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+        "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,25,44,0.06)] border-b border-surface-container-high/60">
+  <div class="h-20 max-w-[1280px] mx-auto px-4 md:px-gutter-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-xl">
+      <a class="flex items-center gap-space-sm" data-path="home" href="../index.html">
+        <img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj">
+      </a>
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a>
+        <div class="relative group flex items-center">
+          <a href="../services_simple_telecalling_support_sevobia/code.html" class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface font-bold transition-colors py-2">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface transition-transform group-hover:rotate-180">expand_more</span>
+          </a>
+          <div class="absolute top-full left-0 hidden group-hover:flex flex-col min-w-[240px] py-space-sm bg-surface-container-lowest rounded-xl shadow-[0_12px_24px_-6px_rgba(11,25,44,0.12)] border border-surface-container-high/40 z-50">
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../services_simple_telecalling_support_sevobia/code.html">All Services</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Inbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../chat_whatsapp_support_sevobia/code.html">Chat &amp; WhatsApp Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../email_support_sevobia/code.html">Email Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../lead_follow_up_sevobia/code.html">Lead Follow-Up</a>
+          </div>
+        </div>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../about_us_sevobia/code.html">About Us</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+      <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="lg:hidden p-2 text-on-surface hover:text-secondary-container focus:outline-none">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-surface-container-high px-4 py-4 space-y-3">
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../index.html">Home</a>
+    <a class="block py-2 font-label-lg text-on-surface font-bold" href="../services_simple_telecalling_support_sevobia/code.html">Services</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../inbound_call_support_simple_telecalling_sevobia/code.html">• Inbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">• Outbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../chat_whatsapp_support_sevobia/code.html">• WhatsApp Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../email_support_sevobia/code.html">• Email Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../lead_follow_up_sevobia/code.html">• Lead Follow-Up</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../about_us_sevobia/code.html">About Us</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+    <div class="pt-3 border-t border-surface-container flex flex-col gap-2 sm:hidden">
+      <a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-center shadow-md" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+    </div>
+  </div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb Bar & Live SLA Status -->
+<section class="w-full bg-surface-container-low/70 py-space-sm">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-wrap items-center justify-between gap-space-sm text-body-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md">
+<a class="hover:text-on-surface transition-colors flex items-center gap-1" href="../index.html">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span class="">Home</span>
+</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">Services</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold">Chat &amp; WhatsApp Support</span>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-md text-on-surface font-medium">Real Human Agents • 60-Second Reply Time • WhatsApp Official API &amp; Web Chat</span>
+</div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="w-full relative overflow-hidden py-margin-md lg:py-margin-lg bg-surface">
+<!-- Subtle architectural background accent -->
+<div class="absolute -top-32 right-0 w-96 h-96 bg-surface-container-high/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 left-0 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left: Copy & Conversions -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-caps self-start">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="">Zero Unanswered Messages</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Reply To Every Customer WhatsApp &amp; Website Chat In Seconds. <span class="text-secondary-container">Even While You Sleep.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            When buyers message your business on WhatsApp or your website, our polite, trained agents answer immediately. We explain product details, send catalogs, share UPI payment links, and solve customer doubts so you never lose an order.
+          </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-2 px-space-xl py-3.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all" href="#trial-box">
+<span class="">Request Free 2-Day Trial</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-space-lg py-3.5 rounded-lg bg-surface-container-lowest text-primary-container font-label-lg text-label-lg font-bold shadow-sm hover:bg-surface-container transition-colors" href="#live-demo-section">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">chat_bubble</span>
+<span class="">See Live Chat Demo</span>
+</a>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">timer</span>
+<span class="font-label-md text-on-surface">Under 60s Reply</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">translate</span>
+<span class="font-label-md text-on-surface">Hindi &amp; English</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">verified_user</span>
+<span class="font-label-md text-on-surface">No Complex Setup</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">mark_email_read</span>
+<span class="font-label-md text-on-surface">Daily Summary</span>
+</div>
+</div>
+</div>
+<!-- Right: Realistic Chat Mockup -->
+<div class="lg:col-span-6 w-full">
+<div class="relative rounded-2xl bg-primary-container p-4 sm:p-6 shadow-2xl text-on-primary overflow-hidden">
+<!-- Terminal Header -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-primary font-bold">
+<span class="material-symbols-outlined text-[22px]">headset_mic</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg font-bold text-on-primary">Ananya R. (Pod 3)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/20 text-[10px] font-label-caps text-on-primary uppercase tracking-wider">Sevobia Live Support</span>
+</div>
+<div class="flex items-center gap-2 text-on-primary-container font-label-md text-[11px]">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="">Online &amp; Assisting Customers</span>
+<span class="">•</span>
+<span class="text-secondary-fixed">Response speed: 42s</span>
+</div>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-lowest/10 text-on-primary text-[11px] font-label-md">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="">Verified Business API</span>
+</div>
+</div>
+<!-- Chat Canvas Pane -->
+<div class="rounded-xl bg-surface-container-low p-4 sm:p-5 flex flex-col gap-3 text-on-surface max-h-[460px] overflow-y-auto">
+<!-- Customer Message 1 -->
+<div class="flex flex-col items-start max-w-[85%] self-start">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1 px-1">Vikram Sharma (Jaipur) • 10:14 PM</span>
+<div class="p-3.5 rounded-2xl rounded-tl-none bg-surface-container-lowest shadow-sm text-body-sm">
+                  Hello! I saw your Brass Diya set online. Do you have the 5-tier option in stock? Also can you deliver to Malviya Nagar by Friday?
+                </div>
+</div>
+<!-- Agent Message 1 (Under 45s Reply) -->
+<div class="flex flex-col items-end max-w-[88%] self-end">
+<span class="font-label-caps text-[10px] text-on-surface-variant mb-1 px-1 text-right">Sevobia Support • 10:14 PM (42s reply)</span>
+<div class="p-3.5 rounded-2xl rounded-tr-none bg-primary-container text-on-primary shadow-sm text-body-sm flex flex-col gap-2.5">
+<p class="">Namaste Vikram ji! Yes, we have 4 units of the handcrafted 5-tier Brass Diya ready at our warehouse.</p>
+<p class="">For Malviya Nagar, Jaipur, our BlueDart express delivery takes only 48 hours, so you will easily receive it by Thursday afternoon.</p>
+<!-- Mini Product Card Attachment -->
+<div class="p-2.5 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-between gap-3 shadow-inner">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<p class="font-label-md font-bold text-on-surface">5-Tier Handcrafted Brass Diya</p>
+<p class="font-label-md text-on-surface-variant text-[11px]">Weight: 1.8 kg • Free Express Shipping</p>
+</div>
+</div>
+<span class="font-label-md text-on-surface font-bold bg-surface-container-low px-2 py-1 rounded">₹1,850</span>
+</div>
+</div>
+</div>
+<!-- Customer Message 2 -->
+<div class="flex flex-col items-start max-w-[85%] self-start">
+<div class="p-3.5 rounded-2xl rounded-tl-none bg-surface-container-lowest shadow-sm text-body-sm">
+                  Great! Can I pay directly via Google Pay or UPI right now so you pack it tonight?
+                </div>
+</div>
+<!-- Agent Message 2: Instant Payment Link -->
+<div class="flex flex-col items-end max-w-[88%] self-end">
+<div class="p-3.5 rounded-2xl rounded-tr-none bg-primary-container text-on-primary shadow-sm text-body-sm flex flex-col gap-2">
+<p class="">Certainly Vikram ji! You can click below to pay via GPay, PhonePe, or Paytm. Once done, simply share your pincode here and our dispatch team will assign the tracking number tonight.</p>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">qr_code_scanner</span>
+<span class="font-label-md font-bold text-on-surface">Verified Business UPI Link</span>
+</div>
+<span class="font-label-md text-secondary-container font-bold">Pay ₹1,850</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Status Footer -->
+<div class="pt-3 flex items-center justify-between text-[12px] font-label-md text-on-primary-container">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-emerald-400">check_circle</span>
+<span class="">Chat safely logged into Business CRM</span>
+</span>
+<span class="text-secondary-fixed">Order Confirmed in 3 Minutes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: How It Works in 3 Simple Steps -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-sm mb-space-2xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Simple &amp; Frictionless Setup</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">How Sevobia Chat Works For Your Business</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">No complex call-center software to learn. You continue running your shop or clinic while we manage the conversations on your behalf.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+<!-- Step 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg flex flex-col gap-space-md shadow-sm hover:shadow-md transition-shadow relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container font-headline-md font-bold">
+            01
+          </div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Connect WhatsApp or Website</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              We link to your existing WhatsApp Business number or provide a 1-minute copy-paste widget for your website. No tech engineer required.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm flex items-center gap-2 text-on-surface-variant font-label-md text-body-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">done_all</span>
+<span class="">Works on mobile &amp; laptop instantly</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg flex flex-col gap-space-md shadow-sm hover:shadow-md transition-shadow relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container font-headline-md font-bold">
+            02
+          </div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Trained Staff Answers Respectfully</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Our polite executives greet your customers in Hindi or English, follow your exact pricing and return guidelines, and handle every customer doubt.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm flex items-center gap-2 text-on-surface-variant font-label-md text-body-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>
+<span class="">100% human agents with domain training</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg flex flex-col gap-space-md shadow-sm hover:shadow-md transition-shadow relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container font-headline-md font-bold">
+            03
+          </div>
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Orders &amp; Leads Saved Directly</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Payment receipts, customer addresses, appointment slots, and special requests are forwarded directly to your personal phone or Google Sheet.
+            </p>
+</div>
+<div class="mt-auto pt-space-sm flex items-center gap-2 text-on-surface-variant font-label-md text-body-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">notifications_active</span>
+<span class="">Daily Excel or WhatsApp digest provided</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Real Everyday Chats We Handle (4 Scenarios) -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs max-w-xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Everyday Indian Business Scenarios</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Exact Chats We Handle All Day Long</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Here is how Sevobia executives step in so your team never misses a ready-to-buy customer.</p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high/40 px-3 py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">task_alt</span>
+<span class="font-label-md text-on-surface">Over 85,000 Chats Answered Every Month</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+<!-- Scenario A -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Price &amp; Catalog Inquiries</h3>
+<p class="font-label-md text-on-surface-variant">D2C, Fashion, Jewelry &amp; Electronics</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Customers frequently ask: "Bhaiya, price kitna hai?", "Do you have size XL in blue?", or "Share catalog PDF". Our team sends product pictures, explains discounts, and guides them directly into buying.
+          </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-body-sm text-on-surface">
+<span class="font-medium">Avg. time saved for owner:</span>
+<span class="font-bold text-secondary-container">3.5 hours every day</span>
+</div>
+</div>
+<!-- Scenario B -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Order Tracking &amp; Delivery Updates</h3>
+<p class="font-label-md text-on-surface-variant">E-Commerce, Manufacturing &amp; Retailers</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Shoppers getting anxious about "Where is my parcel?" or "Courier boy did not call". We check courier tracking on Shiprocket, Delhivery, or India Post and reassure them politely so they do not cancel.
+          </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-body-sm text-on-surface">
+<span class="font-medium">Direct result:</span>
+<span class="font-bold text-secondary-container">40% drop in RTO (Return to Origin)</span>
+</div>
+</div>
+<!-- Scenario C -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Clinic &amp; Service Slot Bookings</h3>
+<p class="font-label-md text-on-surface-variant">Doctors, Dental Clinics, Salons &amp; Labs</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Patients and clients asking for morning or evening appointments. Our team checks your master diary, blocks the consultation time, sends Google Map directions, and confirms appointment guidelines.
+          </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-body-sm text-on-surface">
+<span class="font-medium">Appointment confirmation:</span>
+<span class="font-bold text-secondary-container">Over 92% attendance rate</span>
+</div>
+</div>
+<!-- Scenario D -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">bedtime</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Nighttime &amp; Weekend Coverage</h3>
+<p class="font-label-md text-on-surface-variant">Real Estate, EdTech, Coaching &amp; Trade</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Indian consumers browse late at night (9:00 PM to 1:00 AM) and on Sundays. While your shop is closed or you are with family, our night shift agents reply right away and capture the lead before competitors do.
+          </p>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between text-body-sm text-on-surface">
+<span class="font-medium">Captured leads:</span>
+<span class="font-bold text-secondary-container">Zero lost opportunities after 8 PM</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Side-by-Side Visual Walkthrough -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface-container-low" id="live-demo-section">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-sm mb-space-2xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Total Transparency</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">A Real Customer Chat In Action</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">See the exact difference between what your customer experiences on their phone and what you see as the owner.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg items-stretch">
+<!-- Side 1: What Your Customer Sees -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">What Your Customer Sees</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-md">WhatsApp Screen</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<!-- Message Bubble 1 -->
+<div class="bg-surface-container-lowest p-3 rounded-lg self-start max-w-[90%] shadow-sm text-body-sm">
+<p class="font-label-md font-bold text-on-surface">Customer (Amit Goyal):</p>
+<p class="text-on-surface-variant">"Hi, is the consultation available for tomorrow 5 PM at your South Extension clinic?"</p>
+</div>
+<!-- Message Bubble 2 -->
+<div class="bg-primary-container text-on-primary p-3 rounded-lg self-end max-w-[90%] shadow-sm text-body-sm">
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-md font-bold text-secondary-fixed">Sevobia Executive:</span>
+<span class="text-[10px] text-on-primary-container">40 seconds later</span>
+</div>
+<p class="text-on-primary">"Namaste Amit ji! Yes, Dr. Khanna has a slot available tomorrow at 5:15 PM. May I have the patient's name and age to book this for you?"</p>
+</div>
+<!-- Message Bubble 3 -->
+<div class="bg-surface-container-lowest p-3 rounded-lg self-start max-w-[90%] shadow-sm text-body-sm">
+<p class="font-label-md font-bold text-on-surface">Customer (Amit Goyal):</p>
+<p class="text-on-surface-variant">"Patient is Sunita Goyal, age 52. Please book it."</p>
+</div>
+<!-- Message Bubble 4 -->
+<div class="bg-primary-container text-on-primary p-3 rounded-lg self-end max-w-[90%] shadow-sm text-body-sm">
+<p class="text-on-primary font-medium">"Confirmed Amit ji! Slot is booked for Sunita ji tomorrow at 5:15 PM. Here is the clinic address and Google Map location pin:"</p>
+<div class="mt-2 p-2 bg-surface-container-lowest text-on-surface rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">pin_drop</span>
+<span class="text-[12px] font-medium">B-14, South Extension Part 2, New Delhi</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant italic">Polite, fast, and 100% focused on closing the appointment without frustrating the patient.</p>
+</div>
+<!-- Side 2: What You (Business Owner) Receive -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">What You Receive</span>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-md">Daily WhatsApp Digest</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-secondary uppercase font-bold">New Booking Added</span>
+<span class="text-on-surface-variant font-label-md text-[11px]">Today at 5:18 PM</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-body-sm pt-1">
+<div>
+<span class="text-on-surface-variant text-[11px] block">Patient Name</span>
+<span class="font-bold text-on-surface">Sunita Goyal (Age 52)</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Contact Phone</span>
+<span class="font-bold text-on-surface">+91 98110 XXXXX</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Slot Reserved</span>
+<span class="font-bold text-on-surface">Tomorrow, 5:15 PM</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Lead Status</span>
+<span class="font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded text-[11px] inline-block">Confirmed &amp; Location Sent</span>
+</div>
+</div>
+</div>
+<!-- Daily Summary Card Preview -->
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm flex flex-col gap-2">
+<span class="font-label-caps text-on-surface-variant uppercase font-bold">Today's End-of-Day Summary</span>
+<div class="flex items-center justify-between text-body-sm py-1">
+<span class="text-on-surface-variant">Total Inquiries Handled</span>
+<span class="font-bold text-on-surface">47 chats</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1">
+<span class="text-on-surface-variant">Confirmed Appointments / Orders</span>
+<span class="font-bold text-secondary-container">19 confirmed</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1">
+<span class="text-on-surface-variant">Average Reply Speed</span>
+<span class="font-bold text-on-surface">38 seconds</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-on-surface-variant italic">You receive a neat snapshot every evening. No micromanagement, no chaos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Why Indian Businesses Choose Sevobia Over Chatbots / In-House -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-sm mb-space-2xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Human Empathy That Sells</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Real Humans Beat AI Chatbots Every Single Time</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Indian shoppers need warmth, reassurance, and quick flexibility. Here is why auto-reply bots fail and how Sevobia wins their trust.</p>
+</div>
+<div class="rounded-2xl bg-surface-container-low p-space-md lg:p-space-xl shadow-sm overflow-x-auto">
+<table class="w-full text-left min-w-[640px]">
+<thead>
+<tr class="text-on-surface font-headline-sm text-headline-sm">
+<th class="pb-space-md w-1/3">Key Feature</th>
+<th class="pb-space-md w-1/3 text-on-surface-variant font-medium">Generic Automated Chatbots</th>
+<th class="pb-space-md w-1/3 text-secondary-container font-bold">Sevobia Human Agents</th>
+</tr>
+</thead>
+<tbody class="text-body-md text-on-surface divide-y-0">
+<tr class="bg-surface-container-lowest rounded-lg">
+<td class="p-4 font-bold rounded-l-lg">Hinglish &amp; Indian Slang Understanding</td>
+<td class="p-4 text-on-surface-variant">Gets confused by typos, mixed Hindi-English, or voice notes.</td>
+<td class="p-4 text-on-surface font-semibold bg-surface-container-high/30 rounded-r-lg">Understands exact intent, local slang, and Hindi terms effortlessly.</td>
+</tr>
+<tr>
+<td class="p-4 font-bold">Closing The Sale</td>
+<td class="p-4 text-on-surface-variant">Repeats rigid menu buttons (Press 1, Press 2) leading to frustrated drops.</td>
+<td class="p-4 text-on-surface font-semibold bg-surface-container-high/30">Politely offers alternatives, sends QR links, and answers payment doubts.</td>
+</tr>
+<tr class="bg-surface-container-lowest rounded-lg">
+<td class="p-4 font-bold rounded-l-lg">Courier &amp; RTO Reassurance</td>
+<td class="p-4 text-on-surface-variant">Shares cold, robotic tracking URLs that buyers rarely open.</td>
+<td class="p-4 text-on-surface font-semibold bg-surface-container-high/30 rounded-r-lg">Calls the courier hub, gives exact arrival day, and calms down angry buyers.</td>
+</tr>
+<tr>
+<td class="p-4 font-bold">Hiring &amp; Managing Headaches</td>
+<td class="p-4 text-on-surface-variant">Software requires complex flow-building and monthly maintenance.</td>
+<td class="p-4 text-on-surface font-semibold bg-surface-container-high/30">Zero staff turnover headaches. Sevobia manages training, shifts, and backup staff.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Section: Two Simple Setup Options (NO PRICING) -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-sm mb-space-2xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Flexible Engagement</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Two Simple Team Setups</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Choose the operational model that matches your daily message volume. Upgrade or adjust anytime as your orders increase.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg items-stretch">
+<!-- Option A: Shared Chat Support Team -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-caps uppercase">Best for Growing Businesses</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[24px]">group_work</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Shared Chat Support Team</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              A certified team of agents monitors your incoming messages alongside a strictly capped pool of similar non-competing businesses. Ideal for handling steady, daily customer volume without hiring full-time staff.
+            </p>
+<ul class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-on-surface">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Best suited for 15 to 50 customer chats every day</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Under 60-second guaranteed response time</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Covers WhatsApp Business, website live chat, and Instagram DMs</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Standard 12-hour or 16-hour daily coverage window</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Daily compiled leads and order spreadsheet forwarded to you</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-xl">
+<a class="w-full inline-flex items-center justify-center py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg font-bold hover:bg-primary-container hover:text-on-primary transition-colors" href="#trial-box">
+              Request Setup Consultation
+            </a>
+</div>
+</div>
+<!-- Option B: Dedicated Chat Executive -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-xl shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between relative overflow-hidden">
+<!-- Top Accent Band -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary-container"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps uppercase font-bold">Highest Brand Focus</span>
+<span class="material-symbols-outlined text-secondary-container text-[24px]">person_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Dedicated Chat Executive</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              One or more full-time chat executives assigned solely to your brand. They memorize your complete product catalog, handle custom negotiations, and operate directly inside your CRM and order portal.
+            </p>
+<ul class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-on-surface">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">100% dedicated agent working exclusively for your company</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Instant response under 30 seconds</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Deep training on complex services, high-ticket sales, and custom workflows</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Direct daily sync with your business manager via Google Meet or Slack</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">check_circle</span>
+<span class="">Full backup agent provided automatically during leaves or holidays</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-xl">
+<a class="w-full inline-flex items-center justify-center py-3 rounded-lg bg-secondary-container text-on-primary font-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all" href="#trial-box">
+              Hire Dedicated Executive
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Straightforward FAQs -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-surface">
+<div class="max-w-[880px] mx-auto px-gutter-lg">
+<div class="flex flex-col items-center text-center gap-space-sm mb-space-2xl">
+<span class="font-label-caps text-secondary uppercase tracking-wider">Common Doubts Cleared</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Simple, direct answers with no confusing corporate jargon.</p>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Will you answer using my exact business name?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Yes, absolutely. To your customers, our executives appear as your internal team members. They greet with your company name, follow your established etiquette, and adhere to your exact guidelines.
+          </p>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">What if a customer writes in Hindi, Hinglish, or regional terms?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            All our agents are based in India and are fluent in conversational English, Hindi, and everyday Hinglish phrasing. If a buyer sends a voice note in Hindi or writes phonetically, our team responds naturally in the same tone.
+          </p>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Do I need to buy expensive software or WhatsApp API tools?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            No. If you already have an official WhatsApp Business setup, we simply link with it. If you do not have one, we guide you through standard verification or connect through simple multi-device access without any hidden software bills.
+          </p>
+</div>
+<!-- FAQ 4 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">How do I know what was spoken with my customers?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Every chat remains 100% visible to you in real-time on your master phone or CRM dashboard. Additionally, our team sends an evening report summarizing key conversations, leads, and payment confirmations.
+          </p>
+</div>
+<!-- FAQ 5 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Is there any long-term contract lock-in?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            None at all. You can start with a 2-day trial, continue on a simple monthly arrangement, and pause or upgrade anytime your business requirements shift.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Banner with Quick Form -->
+<section class="w-full py-margin-md lg:py-margin-lg bg-primary-container text-on-primary relative overflow-hidden" id="trial-box">
+<!-- Visual background element -->
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Copy Side -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/15 text-on-primary font-label-caps self-start">
+<span class="material-symbols-outlined text-[14px]">speed</span>
+<span class="">Live Response Test</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary tracking-tight">
+            Want to see how fast we reply? Test our chat team right now.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">
+            Leave your WhatsApp number and business type. A dedicated Indian account manager will connect with you in 15 minutes to run a real test chat on your own phone.
+          </p>
+<div class="flex flex-col gap-space-xs pt-space-sm text-body-sm text-on-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>
+<span class="">100% Free 2-Day Trial • No credit card required</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">receipt_long</span>
+<span class="">Proper GST Invoices provided for full tax input credit</span>
+</div>
+</div>
+</div>
+<!-- Quick Form Card -->
+<div class="lg:col-span-6 w-full">
+<div class="rounded-2xl bg-surface-container-lowest p-space-lg sm:p-space-xl text-on-surface shadow-xl">
+<div class="pb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Start Free Chat Test</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We will message your WhatsApp with a sample conversation setup.</p>
+</div>
+<form class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); alert('Thank you! A Sevobia manager will message your WhatsApp within 15 minutes to begin your free test.');">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-on-surface font-semibold">Your Full Name</label>
+<input class="h-11 px-3.5 rounded-lg bg-surface-container-low text-on-surface font-body-md outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="e.g. Rajesh Mehra" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-on-surface font-semibold">WhatsApp Number</label>
+<div class="flex items-center rounded-lg bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary-container">
+<span class="px-3 text-on-surface-variant font-label-md font-bold bg-surface-container">+91</span>
+<input class="h-11 w-full px-2 bg-transparent text-on-surface font-body-md outline-none" pattern="[0-9]{10}" placeholder="98765 43210" required="" type="tel">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-on-surface font-semibold">Your Business Type</label>
+<select class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md outline-none focus:ring-2 focus:ring-primary-container">
+<option>D2C / E-Commerce Brand</option>
+<option>Retail Store / Wholesaler</option>
+<option>Doctor / Healthcare / Clinic</option>
+<option>Real Estate &amp; Construction</option>
+<option>Coaching / Education Center</option>
+<option>Salon / Spa / Service Professional</option>
+<option>Other Business</option>
+</select>
+</div>
+<div class="pt-space-xs">
+<button class="w-full py-3.5 rounded-lg bg-secondary-container text-on-primary font-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all flex items-center justify-center gap-2" type="submit">
+<span class="">Start Free Chat Test</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<p class="text-center font-label-md text-[11px] text-on-surface-variant">
+                Guaranteed privacy. We will never share your contact details.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-primary-container text-on-primary-fixed-variant pt-margin-lg pb-margin-md"><div class="max-w-[1280px] mx-auto px-gutter-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><a href="../index.html"><img src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj" alt="Sevobia" class="h-8 w-auto object-contain brightness-0 invert"></a></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">Dedicated voice calling, multi-channel messaging, and high-intent customer communications for growing businesses across India. Fast deployment, verified agents, and transparent SLA reporting.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">100% Real Callers</span><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">GST Invoices</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Our Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" data-path="outbound-calling" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Calling</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="inbound-calling" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Inbound Calling</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="chat-and-whatsapp-support" href="../chat_whatsapp_support_sevobia/code.html">Chat &amp; WhatsApp Support</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="email-support" href="../email_support_sevobia/code.html">Email Support</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="lead-follow-up" href="../lead_follow_up_sevobia/code.html">Lead Follow-Up</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Company &amp; Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" data-path="home" href="../index.html">Home</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="about" href="../about_us_sevobia/code.html">About Us</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="services" href="../services_simple_telecalling_support_sevobia/code.html">Services Overview</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="contact" href="../contact_get_a_quote_sevobia/code.html">Contact &amp; Quotes</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Request Callback</span><p class="font-body-sm text-body-sm text-on-primary-container">Enter your phone number for an immediate consultation with an Indian account manager.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-lowest overflow-hidden p-1"><input class="w-full px-space-sm py-1.5 text-on-surface bg-transparent outline-none font-body-sm text-body-sm" placeholder="+91 Phone number" type="tel"><a href="../contact_get_a_quote_sevobia/code.html" class="px-space-md py-1.5 rounded bg-secondary-container text-on-primary font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors font-bold inline-flex items-center justify-center">Call</a></div><span class="font-label-md text-label-md text-on-primary-container">Toll-free &amp; WhatsApp support: +91 98700-SEVOBIA</span></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container"><p class="">© 2025 Sevobia Support Services India Pvt. Ltd. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-primary transition-colors" data-path="contact" href="../contact_get_a_quote_sevobia/code.html">Privacy Policy</a><a class="hover:text-on-primary transition-colors" data-path="contact" href="../contact_get_a_quote_sevobia/code.html">Terms of Service</a><a class="hover:text-on-primary transition-colors" data-path="contact" href="../contact_get_a_quote_sevobia/code.html">GST &amp; Invoicing</a></div></div></div></footer>
+
+
+<script>document.getElementById("mobile-menu-btn")?.addEventListener("click", function(){ var m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("hidden"); });</script></body></html>

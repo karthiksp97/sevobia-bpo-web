@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="500" height="160" fill="none">
+  <!-- Navy base color: #0b192c, Orange accent: #f25a00 -->
+  <g id="sevobia-logo">
+    <!-- 's' -->
+    <path d="M 42 108 C 42 118 51 123 62 123 C 73 123 81 117 81 110 C 81 100 70 96 56 92 C 38 86 28 77 28 62 C 28 46 41 35 60 35 C 78 35 91 46 92 61 L 76 61 C 75 53 68 47 59 47 C 50 47 44 52 44 59 C 44 67 52 71 67 76 C 85 81 97 89 97 107 C 97 124 82 135 61 135 C 41 135 25 124 25 108 Z" fill="#0b192c" />
+    
+    <!-- 'e' -->
+    <path d="M 148 94 L 112 94 C 113 108 122 116 135 116 C 143 116 149 112 152 106 L 166 109 C 160 123 149 128 134 128 C 113 128 97 113 97 88 C 97 64 112 49 133 49 C 153 49 167 63 167 87 C 167 90 166 92 166 94 Z M 151 82 C 150 71 143 62 133 62 C 122 62 114 70 112 82 Z" fill="#0b192c" />
+    
+    <!-- 'v' -->
+    <path d="M 170 51 L 187 51 L 204 105 L 221 51 L 238 51 L 213 126 L 195 126 Z" fill="#0b192c" />
+    
+    <!-- 'o' - Navy portion (full circle minus top right quadrant arc) -->
+    <!-- outer radius: 39, inner radius: 24, center: (278, 88) -->
+    <!-- Navy arc from 0 deg (3 o'clock) CCW? No, let's draw standard donut slices -->
+    <!-- Navy ring body with top-right slice removed:
+         Full ring center (278, 88), outer r=39, inner r=24.
+         Navy covers from 0 deg (278+39=317, 88) clockwise through bottom and left around to 270 deg (top: 278, 49).
+    -->
+    <path d="M 278 49 A 39 39 0 1 0 317 88 L 302 88 A 24 24 0 1 1 278 64 L 278 49 Z" fill="#0b192c" />
+    <!-- Orange accent: top-right quadrant of the 'o' (from 270 deg / top to 0 deg / right) -->
+    <path d="M 278 49 A 39 39 0 0 1 317 88 L 302 88 A 24 24 0 0 0 278 64 Z" fill="#f25a00" />
+    
+    <!-- 'b' -->
+    <path d="M 326 25 L 342 25 L 342 59 C 347 52 355 49 366 49 C 386 49 400 65 400 88 C 400 112 386 128 365 128 C 355 128 347 124 342 117 L 342 126 L 326 126 Z M 342 88 C 342 104 351 115 363 115 C 375 115 384 104 384 88 C 384 72 375 62 363 62 C 351 62 342 73 342 88 Z" fill="#0b192c" />
+    
+    <!-- 'i' stem -->
+    <path d="M 412 51 L 428 51 L 428 126 L 412 126 Z" fill="#0b192c" />
+    <!-- 'i' dot: Orange circle -->
+    <circle cx="420" cy="33" r="8" fill="#f25a00" />
+    
+    <!-- 'a' -->
+    <path d="M 478 51 L 493 51 L 493 126 L 478 126 L 478 117 C 473 124 465 128 454 128 C 435 128 421 113 421 88 C 421 64 435 49 454 49 C 464 49 472 53 478 60 Z M 478 88 C 478 72 470 62 458 62 C 445 62 437 72 437 88 C 437 104 445 115 458 115 C 470 115 478 104 478 88 Z" fill="#0b192c" />
+  </g>
+</svg>

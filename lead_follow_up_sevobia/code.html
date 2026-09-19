@@ -1,0 +1,959 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-primary-fixed-variant": "#3a475c",
+        "on-tertiary": "#ffffff",
+        "secondary-fixed-dim": "#ffb694",
+        "on-primary": "#ffffff",
+        "secondary-container": "#ff6a00",
+        "surface-tint": "#525f75",
+        "surface-container-low": "#eff4ff",
+        "error-container": "#ffdad6",
+        "surface-container-high": "#dce9ff",
+        "primary": "#000000",
+        "surface-bright": "#f8f9ff",
+        "tertiary": "#000000",
+        "on-secondary-container": "#571f00",
+        "on-secondary": "#ffffff",
+        "on-secondary-fixed": "#351000",
+        "on-primary-container": "#77849c",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-dim": "#cbdbf5",
+        "secondary": "#a14000",
+        "primary-fixed": "#d6e3fe",
+        "tertiary-fixed-dim": "#aac9f4",
+        "on-tertiary-fixed-variant": "#29486d",
+        "primary-fixed-dim": "#bac7e1",
+        "on-background": "#0b1c30",
+        "background": "#f8f9ff",
+        "on-error-container": "#93000a",
+        "outline": "#75777d",
+        "on-surface": "#0b1c30",
+        "surface-container-highest": "#d3e4fe",
+        "tertiary-fixed": "#d3e4ff",
+        "on-tertiary-container": "#6886ae",
+        "inverse-surface": "#213145",
+        "on-secondary-fixed-variant": "#7b2f00",
+        "secondary-fixed": "#ffdbcc",
+        "primary-container": "#0e1c2f",
+        "on-primary-fixed": "#0e1c2f",
+        "outline-variant": "#c5c6cd",
+        "inverse-primary": "#bac7e1",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#001c38",
+        "on-surface-variant": "#44474c",
+        "surface-container": "#e5eeff",
+        "error": "#ba1a1a",
+        "tertiary-container": "#001c38",
+        "surface-variant": "#d3e4fe",
+        "surface": "#f8f9ff",
+        "on-error": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "margin": "1.5rem",
+        "space-xs": "0.25rem",
+        "space-xl": "2.5rem",
+        "gutter-sm": "1rem",
+        "space-md": "1rem",
+        "margin-lg": "5rem",
+        "space-2xl": "4rem",
+        "gutter-lg": "2rem",
+        "margin-md": "3rem",
+        "gutter": "1.5rem",
+        "space-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "body-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "headline-xl-mobile": ["Plus Jakarta Sans"],
+        "headline-sm": ["Plus Jakarta Sans"],
+        "headline-lg": ["Plus Jakarta Sans"],
+        "label-md": ["Inter"],
+        "headline-xl": ["Plus Jakarta Sans"],
+        "label-caps": ["Inter"],
+        "display-hero": ["Plus Jakarta Sans"],
+        "label-lg": ["Inter"],
+        "body-lg": ["Inter"],
+        "display-hero-mobile": ["Plus Jakarta Sans"],
+        "headline-md": ["Plus Jakarta Sans"]
+      },
+      "fontSize": {
+        "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+        "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+        "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,25,44,0.06)] border-b border-surface-container-high/60">
+  <div class="h-20 max-w-[1280px] mx-auto px-4 md:px-gutter-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-xl">
+      <a class="flex items-center gap-space-sm" data-path="home" href="../index.html">
+        <img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj">
+      </a>
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a>
+        <div class="relative group flex items-center">
+          <a href="../services_simple_telecalling_support_sevobia/code.html" class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface font-bold transition-colors py-2">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface transition-transform group-hover:rotate-180">expand_more</span>
+          </a>
+          <div class="absolute top-full left-0 hidden group-hover:flex flex-col min-w-[240px] py-space-sm bg-surface-container-lowest rounded-xl shadow-[0_12px_24px_-6px_rgba(11,25,44,0.12)] border border-surface-container-high/40 z-50">
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../services_simple_telecalling_support_sevobia/code.html">All Services</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Inbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../chat_whatsapp_support_sevobia/code.html">Chat &amp; WhatsApp Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../email_support_sevobia/code.html">Email Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../lead_follow_up_sevobia/code.html">Lead Follow-Up</a>
+          </div>
+        </div>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../about_us_sevobia/code.html">About Us</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+      <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="lg:hidden p-2 text-on-surface hover:text-secondary-container focus:outline-none">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-surface-container-high px-4 py-4 space-y-3">
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../index.html">Home</a>
+    <a class="block py-2 font-label-lg text-on-surface font-bold" href="../services_simple_telecalling_support_sevobia/code.html">Services</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../inbound_call_support_simple_telecalling_sevobia/code.html">• Inbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">• Outbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../chat_whatsapp_support_sevobia/code.html">• WhatsApp Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../email_support_sevobia/code.html">• Email Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../lead_follow_up_sevobia/code.html">• Lead Follow-Up</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../about_us_sevobia/code.html">About Us</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+    <div class="pt-3 border-t border-surface-container flex flex-col gap-2 sm:hidden">
+      <a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-center shadow-md" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+    </div>
+  </div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Announcement Strip -->
+<section class="w-full bg-surface-container-low py-space-sm">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<nav class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" data-path="home" href="../index.html">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-on-surface transition-colors" data-path="services" href="../services_simple_telecalling_support_sevobia/code.html">Services</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Lead Follow-Up</span>
+</nav>
+<div class="inline-flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="">Under 5-Minute Call-Back</span>
+<span class="text-outline-variant">•</span>
+<span class="">5x Higher Contact Rate</span>
+<span class="text-outline-variant">•</span>
+<span class="">Real Indian Callers</span>
+</div>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left Column: Copy & CTAs -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high text-on-primary-fixed font-label-caps text-label-caps uppercase tracking-wider w-fit">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">speed</span>
+          Speed-To-Lead Engine
+        </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          Stop Wasting Money On Ads. <br class="hidden sm:inline">
+<span class="text-secondary-container">We Call Your Leads Within 5 Minutes</span> So They Buy From You.
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          When people submit a form on Facebook, Instagram, Google, JustDial, or your website, their interest drops by 80% after 30 minutes. Our polite telecallers contact them instantly, verify their requirement, and book ready-to-close meetings on your calendar.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-2 px-space-xl py-3 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all" href="#pilot-form">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+            Calculate Your Saved Leads
+          </a>
+<a class="inline-flex items-center justify-center gap-2 px-space-xl py-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-low transition-all" href="#how-it-works">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+            See How We Call Leads
+          </a>
+</div>
+<!-- Reassurance Feature Pills -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md">
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">timer</span>
+<span class="font-label-md text-label-md text-on-surface">5-Min First Call</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">repeat</span>
+<span class="font-label-md text-label-md text-on-surface">5 Dial Attempts</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">chat</span>
+<span class="font-label-md text-label-md text-on-surface">WhatsApp Sync</span>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>
+<span class="font-label-md text-label-md text-on-surface">Pre-Qualified</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Lead Engine Timeline Mockup -->
+<div class="lg:col-span-5 relative">
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-lg shadow-xl relative overflow-hidden">
+<!-- Top Card Bar -->
+<div class="flex items-center justify-between pb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="w-3 h-3 rounded-full bg-surface-tint"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant ml-2">Live Response Pipeline</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary-container font-label-caps text-label-caps font-bold">
+              Active Call Flow
+            </span>
+</div>
+<!-- Timeline Trace -->
+<div class="flex flex-col gap-space-md relative">
+<div class="absolute left-[15px] top-3 bottom-3 w-[2px] bg-surface-container-high"></div>
+<!-- Event 1 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-on-surface">campaign</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">00:00 • Inbound Webhook</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Meta Ads</span>
+</div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Form Submitted: Rahul Verma</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inquiry: 3BHK Whitefield Project • Budget: ₹85 Lakhs</p>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-primary-container">call</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">02:40 • Telecaller Dials</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Connected</span>
+</div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Sevobia Caller Connected</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hindi &amp; English conversation initiated with Rahul.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-primary-container">checklist</span>
+</div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">04:15 • Verification Complete</span>
+<span class="font-label-md text-label-md text-on-surface-variant">3/3 Criteria Met</span>
+</div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Requirements Verified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Confirmed ready-to-move requirement, loan pre-approved.</p>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="flex items-start gap-space-md relative">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-[16px] text-on-secondary">event_available</span>
+</div>
+<div class="flex-1 bg-surface-container p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-bold">05:30 • Appointment Set</span>
+<span class="font-label-md text-label-md font-semibold text-secondary">High Intent</span>
+</div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface mt-0.5">Site Visit Booked: Saturday 11:00 AM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calendar invite sent to Sales Head &amp; WhatsApp alert confirmed.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Metric Callout -->
+<div class="mt-space-md p-space-md rounded-lg bg-primary-container text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container">trending_up</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-primary-container uppercase">Conversion Impact</p>
+<p class="font-headline-sm text-headline-sm font-bold text-on-primary">4% → 19%</p>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-primary-container text-right max-w-[140px]">
+              Average jump for Indian lead campaigns
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: How It Works in 3 Simple Steps -->
+<section class="w-full py-space-2xl bg-surface-container-low" id="how-it-works">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col gap-space-2xl">
+<div class="flex flex-col items-center text-center gap-space-xs max-w-2xl mx-auto">
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">Zero Complexity</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">How It Works in 3 Simple Steps</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We integrate with your existing marketing stack in under 20 minutes so your team never loses an interested customer again.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg">
+<!-- Step 1 -->
+<div class="flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">Step 01</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Instant Setup</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Connect Your Lead Sources</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We sync directly to Meta Ads (Facebook &amp; Instagram), Google Forms, your company website, JustDial, IndiaMART, or daily Excel sheets. As soon as a buyer hits "Submit", our system is alerted.
+          </p>
+<div class="pt-space-xs mt-auto flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Meta Ads</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Google Leads</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">JustDial / IndiaMART</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">ring_volume</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">Step 02</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Persistent Calling</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Persistent &amp; Polite Cadence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            If the person does not answer on the first attempt, our callers follow up up to 5 times across 3 days at optimal hours (morning, afternoon, evening), paired with polite WhatsApp follow-up reminders.
+          </p>
+<div class="pt-space-xs mt-auto flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Morning Call</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Afternoon Dial</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">WhatsApp Follow-Up</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-space-md p-space-xl rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">handshake</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-container">Step 03</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Ready to Close</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Warm Transfer &amp; Bookings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Genuine buyers who confirm their budget, requirement, and readiness are booked directly into your Google/Outlook calendar or transferred live on the phone to your senior internal sales executive.
+          </p>
+<div class="pt-space-xs mt-auto flex flex-wrap gap-1.5">
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Direct Site Visits</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Live Phone Transfer</span>
+<span class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Calendar Lock</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: 4 Real Lead Scenarios We Convert Everyday -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">Industry Expertise</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">4 Everyday Lead Scenarios We Convert</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Custom call scripts, objection handling, and regional language support tailored specifically to your sector.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+<!-- Scenario A -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container text-primary-container material-symbols-outlined">apartment</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Scenario A</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Real Estate &amp; Housing Projects</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              When a customer clicks a Facebook brochure or pricing ad, our callers dial within 5 minutes. We verify their 2BHK/3BHK configuration requirement, expected move-in timeline, and home loan pre-approval before locking a confirmed weekend site inspection.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-md text-label-md bg-surface-container-low p-space-sm rounded-lg">
+<span class="">Key Outcome: Site Inspection Scheduled</span>
+<span class="font-bold text-on-surface">18% - 24% Visit Rate</span>
+</div>
+</div>
+<!-- Scenario B -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container text-primary-container material-symbols-outlined">school</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Scenario B</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Coaching Classes &amp; Study Abroad</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Calling students and parents who downloaded syllabus PDFs or entrance exam test papers. We politely ask about current academic scores, course preferences (JEE, NEET, IELTS, GRE), and book them into this weekend’s free counseling or demo session.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-md text-label-md bg-surface-container-low p-space-sm rounded-lg">
+<span class="">Key Outcome: Free Demo Seat Reserved</span>
+<span class="font-bold text-on-surface">32% Demo Showup</span>
+</div>
+</div>
+<!-- Scenario C -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container text-primary-container material-symbols-outlined">solar_power</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Scenario C</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Solar Panels &amp; Home Renovation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Qualifying residential and commercial inquiries right away. We check whether they own the rooftop, their average monthly DISCOM electricity bill, and immediately schedule a technical engineer for an on-site shadow analysis and proposal presentation.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-md text-label-md bg-surface-container-low p-space-sm rounded-lg">
+<span class="">Key Outcome: Engineer Survey Booked</span>
+<span class="font-bold text-on-surface">Zero Wasted Field Trips</span>
+</div>
+</div>
+<!-- Scenario D -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-surface-container text-primary-container material-symbols-outlined">business_center</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Scenario D</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">B2B SaaS &amp; High-Ticket Services</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Inbound whitepaper or quote requests get followed up within minutes. We verify organization size, designation of the decision-maker, budget authorization, and book a direct Google Meet or Zoom demo directly onto your sales executive’s calendar.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant font-label-md text-label-md bg-surface-container-low p-space-sm rounded-lg">
+<span class="">Key Outcome: Decision-Maker Meeting Locked</span>
+<span class="font-bold text-on-surface">88% Meeting Showup</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: The Speed-to-Lead Reality Visual Comparison -->
+<section class="w-full py-space-2xl bg-surface-container">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">The Cost of Waiting</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">The Speed-to-Lead Reality</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          In digital advertising, leads lose interest with every passing minute. Here is what happens when you call immediately versus waiting till the next business day.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg items-stretch">
+<!-- Fast Call Card -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-primary-container font-label-caps text-label-caps uppercase">Sevobia Way</span>
+<span class="font-headline-md text-headline-md text-secondary-container font-bold">5 Minutes</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Called While Still On Their Phone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              The customer literally just hit submit. They still have their phone in their palm, remember exactly what caught their eye, and appreciate the immediate professional service.
+            </p>
+<!-- Metrics bar -->
+<div class="flex flex-col gap-2 pt-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Call Connection Rate</span>
+<span class="font-bold text-on-surface">85%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 85%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md pt-2">
+<span class="text-on-surface font-semibold">Qualification Chance</span>
+<span class="font-bold text-on-surface">21x Higher</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 95%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Customer is impressed by rapid service and Books a meeting.</span>
+</div>
+</div>
+<!-- Delayed Call Card -->
+<div class="p-space-xl rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps uppercase">Average Business</span>
+<span class="font-headline-md text-headline-md text-outline font-bold">24+ Hours</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Called The Next Afternoon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              The buyer has already been called by three competitors, is busy in a meeting, or says: <em>"I don't remember filling any form, please don't disturb."</em>
+</p>
+<!-- Metrics bar -->
+<div class="flex flex-col gap-2 pt-space-sm">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Call Connection Rate</span>
+<span class="font-bold text-error">18%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 18%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-md text-label-md pt-2">
+<span class="text-on-surface font-semibold">Competitor Interception</span>
+<span class="font-bold text-error">80% Lost</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg p-space-md rounded-lg bg-surface-container-high/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-error">cancel</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Ad spend wasted. Buyer buys from whoever contacted them first.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: What You Receive Every Evening (Daily Dashboard Mockup) -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">100% Accountability</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight mt-1">What You Receive Every Evening</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Transparent, audit-ready reports sent to your WhatsApp and email by 8:00 PM every day. Zero guesswork.
+        </p>
+</div>
+<!-- Dashboard Visual Card -->
+<div class="w-full rounded-2xl bg-surface-container-lowest p-space-xl shadow-lg flex flex-col gap-space-lg">
+<!-- Header row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl p-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-primary-container text-on-primary material-symbols-outlined">analytics</span>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Daily Lead Follow-Up Summary</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Campaign: Bangalore Metro Real Estate Ad Pool • Date: Today</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-md text-label-md font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+            Report Generated 08:00 PM
+          </span>
+</div>
+<!-- 4 Metric Cards -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Inquiries Received</p>
+<p class="font-display-hero text-headline-xl font-bold text-on-surface mt-1">142</p>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1 inline-block">From Meta + Google Ads</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Successfully Connected</p>
+<p class="font-display-hero text-headline-xl font-bold text-on-surface mt-1">118</p>
+<span class="font-label-md text-label-md text-secondary font-semibold mt-1 inline-block">83.1% Connect Rate</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Qualified Prospects</p>
+<p class="font-display-hero text-headline-xl font-bold text-on-surface mt-1">54</p>
+<span class="font-label-md text-label-md text-on-surface-variant mt-1 inline-block">Budget &amp; Need Confirmed</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-high">
+<p class="font-label-caps text-label-caps text-primary uppercase font-bold">Meetings / Visits Locked</p>
+<p class="font-display-hero text-headline-xl font-bold text-secondary-container mt-1">26</p>
+<span class="font-label-md text-label-md text-primary font-semibold mt-1 inline-block">Calendar Invites Synced</span>
+</div>
+</div>
+<!-- Disposition Breakdown & Activity Log -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg pt-space-xs">
+<!-- Breakdown -->
+<div class="lg:col-span-1 flex flex-col gap-space-sm">
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Call Disposition Breakdown</p>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Confirmed Site Visits</span>
+<span class="font-semibold text-on-surface">26 leads (18%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary-container" style="width: 18%;"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-1">
+<span class="text-on-surface-variant">Follow-Up Requested (Busy now)</span>
+<span class="font-semibold text-on-surface">42 leads (30%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-surface-tint" style="width: 30%;"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-1">
+<span class="text-on-surface-variant">Not Interested / Low Budget</span>
+<span class="font-semibold text-on-surface">32 leads (22%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-outline-variant" style="width: 22%;"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm pt-1">
+<span class="text-on-surface-variant">Unreachable (In Cadence)</span>
+<span class="font-semibold text-on-surface">24 leads (17%)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-container-low overflow-hidden">
+<div class="h-full bg-outline" style="width: 17%;"></div>
+</div>
+</div>
+</div>
+<!-- Sample Log Items -->
+<div class="lg:col-span-2 flex flex-col gap-space-xs">
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Sample Connected Call Records</p>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-on-surface-variant bg-surface-container-low">
+<th class="p-2.5 rounded-l">Time</th>
+<th class="p-2.5">Lead Name</th>
+<th class="p-2.5">Language</th>
+<th class="p-2.5">Result</th>
+<th class="p-2.5 rounded-r">Action Taken</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr>
+<td class="p-2.5 font-mono text-on-surface-variant">07:42 PM</td>
+<td class="p-2.5 font-semibold text-on-surface">Siddharth Rao</td>
+<td class="p-2.5 text-on-surface-variant">Kannada + Eng</td>
+<td class="p-2.5"><span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-md text-label-md">Visit Fixed</span></td>
+<td class="p-2.5 text-on-surface">Saturday 2 PM booked</td>
+</tr>
+<tr>
+<td class="p-2.5 font-mono text-on-surface-variant">07:35 PM</td>
+<td class="p-2.5 font-semibold text-on-surface">Neha Gupta</td>
+<td class="p-2.5 text-on-surface-variant">Hindi</td>
+<td class="p-2.5"><span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-md text-label-md">Callback Req</span></td>
+<td class="p-2.5 text-on-surface">Auto-queued for tomorrow 11 AM</td>
+</tr>
+<tr>
+<td class="p-2.5 font-mono text-on-surface-variant">07:18 PM</td>
+<td class="p-2.5 font-semibold text-on-surface">Amit K. Sharma</td>
+<td class="p-2.5 text-on-surface-variant">Hindi + Eng</td>
+<td class="p-2.5"><span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-md text-label-md">Warm Transfer</span></td>
+<td class="p-2.5 text-on-surface">Patched to Sales Manager Manoj</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Two Clear Setups (NO PRICING) -->
+<section class="w-full py-space-2xl bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-gutter-lg flex flex-col gap-space-2xl">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">Flexible Engagement</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Choose The Setup That Fits Your Ad Pipeline</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          No complicated lock-ins. Scale up callers when ad campaigns run, scale down during off-season.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+<!-- Setup 1: Shared Lead Follow-Up Pool -->
+<div class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="p-2.5 rounded-lg bg-surface-container text-primary-container material-symbols-outlined">group_work</span>
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold">
+                Pay-Per-Connected Inquiry
+              </span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Shared Lead Follow-Up Pool</h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mt-1">
+                Best for businesses receiving 10 to 40 inquiries per day
+              </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Your leads are instantly routed to an active standby pool of certified Indian callers trained on your product criteria. Perfect for growing builders, clinic chains, or education consultancies.
+            </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Calls initiated under 5 minutes from ad submission</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Up to 5 multi-attempt follow-ups per lead</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Immediate WhatsApp notification sync</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Daily 8 PM performance and call disposition report</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" href="#pilot-form">
+              Request Shared Pool Setup
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Setup 2: Dedicated Lead Closer Team -->
+<div class="p-space-xl rounded-2xl bg-surface-container-lowest shadow-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 left-0 h-1.5 bg-secondary-container"></div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="p-2.5 rounded-lg bg-surface-container-high text-primary-container material-symbols-outlined">person_pin</span>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-primary font-label-md text-label-md font-semibold">
+                Recommended For Scale
+              </span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Dedicated Sales Qualification Specialist</h3>
+<p class="font-body-sm text-body-sm text-secondary font-semibold mt-1">
+                Full-time telecaller(s) dedicated 8 hours/day exclusively to your pipeline
+              </p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Full-time trained callers working exclusively for your brand. They log directly into your CRM (Zoho, LeadSquared, Salesforce), execute customized pitch scripts, and act as your brand’s in-house voice.
+            </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">100% dedicated 8-hour shift per caller</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Direct real-time entry in your Zoho or LeadSquared CRM</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Custom script testing and objection handling training</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">check</span>
+<span class="">Weekly strategic review call with dedicated team lead</span>
+</div>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-colors" href="#pilot-form">
+              Deploy Dedicated Callers
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Frequently Asked Questions -->
+<section class="w-full py-space-2xl bg-surface">
+<div class="max-w-[1000px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+<div class="text-center flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary-container tracking-wider">Clarifications</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Simple answers to common questions from Indian business owners before getting started.
+        </p>
+</div>
+<div class="flex flex-col gap-space-sm" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">How fast do you actually call the lead after they submit a form?</h3>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            During business hours (9:00 AM to 8:30 PM), our system triggers an automated dial to an available telecaller within seconds of webhook arrival. Average verified first-dial connection time across all client campaigns is 3 minutes 40 seconds.
+          </p>
+</div>
+<!-- FAQ 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">What happens if the lead doesn't answer on the first attempt?</h3>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            We never mark a lead as "lost" after just one try. Our persistent cadence automatically schedules up to 5 strategic call attempts across 3 consecutive days at different hours (morning, afternoon, early evening), paired with a polite WhatsApp message mentioning your company name.
+          </p>
+</div>
+<!-- FAQ 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Can your callers enter notes directly into our CRM?</h3>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            Yes. Our callers regularly work inside Zoho CRM, LeadSquared, Salesforce, HubSpot, or Google Sheets. They update lead status tags, input prospect notes, and trigger calendar invites automatically right inside your environment.
+          </p>
+</div>
+<!-- FAQ 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Can your callers speak Hindi and local languages?</h3>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            Yes. All Sevobia callers speak fluent English and Hindi. Furthermore, for regional campaigns across South or West India, we match your campaign with callers fluent in Kannada, Telugu, Tamil, Marathi, or Gujarati based on your target geographic states.
+          </p>
+</div>
+<!-- FAQ 5 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between cursor-pointer">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Do you charge extra for WhatsApp follow-up messages?</h3>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+            No, polite follow-up messages sent to unanswered leads and instant meeting confirmation alerts to booked prospects are completely included in your follow-up cadence plan.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Bottom CTA Form (Free 10-Lead Pilot) -->
+<section class="w-full py-space-2xl bg-surface-container-high" id="pilot-form">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Text details -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">handshake</span>
+            Risk-Free Proof of Concept
+          </div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Don't Let Another Hot Lead Go Cold. Request A 10-Lead Free Pilot Call.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Send us 10 real inquiries from your latest ad campaign. We will call them within minutes, verify their requirement, and share full call recordings so you can experience the difference yourself.
+          </p>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">No credit card or setup fees required</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Listen to real call recordings of your prospects</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-body-md text-body-md text-on-surface">Dedicated Indian account manager assigned</span>
+</div>
+</div>
+</div>
+<!-- Interactive Form Card -->
+<div class="lg:col-span-6">
+<div class="w-full bg-surface-container-lowest p-space-xl rounded-2xl shadow-xl flex flex-col gap-space-md">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Start Free Lead Pilot</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fill in your business details for immediate onboarding.</p>
+</div>
+<form class="flex flex-col gap-space-md" id="lead-pilot-form">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="pilot-name">Your Full Name</label>
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none" id="pilot-name" placeholder="e.g. Rajesh Nair" required="" type="text">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="pilot-phone">WhatsApp Mobile</label>
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none" id="pilot-phone" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="pilot-industry">Business Sector</label>
+<select class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none" id="pilot-industry">
+<option value="real-estate">Real Estate &amp; Construction</option>
+<option value="education">Coaching &amp; Study Abroad</option>
+<option value="solar">Solar Panel &amp; Renovation</option>
+<option value="healthcare">Clinics &amp; Healthcare</option>
+<option value="b2b">B2B SaaS &amp; Services</option>
+<option value="other">Other High-Ticket Business</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="pilot-volume">Monthly Inquiries / Ad Spend</label>
+<select class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none" id="pilot-volume">
+<option value="vol-small">100 - 300 inquiries / month (₹25k - ₹75k Ad Spend)</option>
+<option value="vol-medium">300 - 1,000 inquiries / month (₹75k - ₹2.5L Ad Spend)</option>
+<option value="vol-large">1,000+ inquiries / month (₹2.5L+ Ad Spend)</option>
+</select>
+</div>
+<button class="w-full mt-space-xs py-3.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-secondary transition-all flex items-center justify-center gap-2" type="submit">
+<span class="">Start Free Lead Pilot (10 Test Calls)</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<p class="font-label-md text-label-md text-on-surface-variant text-center">
+                We will contact you within 15 minutes to review your calling script and set up webhooks.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for Pilot Form Submission
+  const pilotForm = document.getElementById('lead-pilot-form');
+  if (pilotForm) {
+    pilotForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = pilotForm.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Setting up your pilot...';
+      btn.classList.add('opacity-80');
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span> Request Received! Calling you in 15 mins';
+        btn.classList.remove('bg-secondary-container');
+        btn.classList.add('bg-primary-container');
+      }, 1200);
+    });
+  }
+</script></main><footer class="w-full bg-primary-container text-on-primary-fixed-variant pt-margin-lg pb-margin-md"><div class="max-w-[1280px] mx-auto px-gutter-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><a href="../index.html"><img src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj" alt="Sevobia" class="h-8 w-auto object-contain brightness-0 invert"></a></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">Dedicated voice calling, multi-channel messaging, and high-intent customer communications for growing businesses across India. Fast deployment, verified agents, and transparent SLA reporting.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">100% Real Callers</span><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">GST Invoices</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Our Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" data-path="outbound-calling" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Calling</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="inbound-calling" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Inbound Calling</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="chat-and-whatsapp-support" href="../chat_whatsapp_support_sevobia/code.html">Chat &amp; WhatsApp Support</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="email-support" href="../email_support_sevobia/code.html">Email Support</a></li><li class=""><a class="hover:text-on-primary transition-colors" data-path="lead-follow-up" href="../lead_follow_up_sevobia/code.html">Lead Follow-Up</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Company &amp; Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../index.html">Home</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../about_us_sevobia/code.html">About Us</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../services_simple_telecalling_support_sevobia/code.html">Services Overview</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Contact &amp; Quotes</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Request Callback</span><p class="font-body-sm text-body-sm text-on-primary-container">Enter your phone number for an immediate consultation with an Indian account manager.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-lowest overflow-hidden p-1"><input class="w-full px-space-sm py-1.5 text-on-surface bg-transparent outline-none font-body-sm text-body-sm" placeholder="+91 Phone number" type="tel"><a href="../contact_get_a_quote_sevobia/code.html" class="px-space-md py-1.5 rounded bg-secondary-container text-on-primary font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors font-bold inline-flex items-center justify-center">Call</a></div><span class="font-label-md text-label-md text-on-primary-container">Toll-free &amp; WhatsApp support: +91 98700-SEVOBIA</span></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container"><p class="">© 2025 Sevobia Support Services India Pvt. Ltd. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Privacy Policy</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Terms of Service</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">GST &amp; Invoicing</a></div></div></div></footer>
+
+
+<script>document.getElementById("mobile-menu-btn")?.addEventListener("click", function(){ var m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("hidden"); });</script></body></html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "surface-dim": "#cbdbf5",
+        "tertiary-fixed-dim": "#aac9f4",
+        "tertiary": "#000000",
+        "on-secondary": "#ffffff",
+        "primary-fixed-dim": "#bac7e1",
+        "on-primary-fixed-variant": "#3a475c",
+        "primary": "#000000",
+        "primary-fixed": "#d6e3fe",
+        "secondary": "#a14000",
+        "inverse-primary": "#bac7e1",
+        "surface-container-low": "#eff4ff",
+        "surface-container-highest": "#d3e4fe",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed-variant": "#29486d",
+        "inverse-on-surface": "#eaf1ff",
+        "on-tertiary": "#ffffff",
+        "primary-container": "#0e1c2f",
+        "secondary-fixed": "#ffdbcc",
+        "secondary-container": "#ff6a00",
+        "on-tertiary-fixed": "#001c38",
+        "surface-tint": "#525f75",
+        "outline": "#75777d",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#7b2f00",
+        "on-tertiary-container": "#6886ae",
+        "on-surface-variant": "#44474c",
+        "on-primary-fixed": "#0e1c2f",
+        "on-secondary-container": "#571f00",
+        "tertiary-container": "#001c38",
+        "outline-variant": "#c5c6cd",
+        "surface-container": "#e5eeff",
+        "surface-container-high": "#dce9ff",
+        "tertiary-fixed": "#d3e4ff",
+        "on-primary-container": "#77849c",
+        "secondary-fixed-dim": "#ffb694",
+        "on-error-container": "#93000a",
+        "surface": "#f8f9ff",
+        "surface-bright": "#f8f9ff",
+        "surface-container-lowest": "#ffffff",
+        "background": "#f8f9ff",
+        "on-secondary-fixed": "#351000",
+        "on-surface": "#0b1c30",
+        "surface-variant": "#d3e4fe",
+        "error": "#ba1a1a",
+        "inverse-surface": "#213145",
+        "on-background": "#0b1c30",
+        "on-error": "#ffffff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "space-sm": "0.5rem",
+        "gutter-sm": "1rem",
+        "space-xl": "2.5rem",
+        "gutter-lg": "2rem",
+        "gutter": "1.5rem",
+        "space-2xl": "4rem",
+        "space-lg": "1.5rem",
+        "margin-lg": "5rem",
+        "margin-md": "3rem",
+        "margin": "1.5rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "body-sm": [
+          "Inter"
+        ],
+        "label-lg": [
+          "Inter"
+        ],
+        "headline-xl-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-xl": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-lg": [
+          "Plus Jakarta Sans"
+        ],
+        "body-lg": [
+          "Inter"
+        ],
+        "label-md": [
+          "Inter"
+        ],
+        "display-hero-mobile": [
+          "Plus Jakarta Sans"
+        ],
+        "headline-sm": [
+          "Plus Jakarta Sans"
+        ],
+        "body-md": [
+          "Inter"
+        ],
+        "headline-md": [
+          "Plus Jakarta Sans"
+        ],
+        "label-caps": [
+          "Inter"
+        ],
+        "display-hero": [
+          "Plus Jakarta Sans"
+        ]
+      },
+      "fontSize": {
+        "body-sm": [
+          "13px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "label-lg": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "letterSpacing": "0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-xl-mobile": [
+          "28px",
+          {
+            "lineHeight": "36px",
+            "letterSpacing": "-0.015em",
+            "fontWeight": "700"
+          }
+        ],
+        "headline-xl": [
+          "40px",
+          {
+            "lineHeight": "48px",
+            "letterSpacing": "-0.025em",
+            "fontWeight": "700"
+          }
+        ],
+        "headline-lg": [
+          "32px",
+          {
+            "lineHeight": "40px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "700"
+          }
+        ],
+        "body-lg": [
+          "18px",
+          {
+            "lineHeight": "28px",
+            "fontWeight": "400"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "600"
+          }
+        ],
+        "display-hero-mobile": [
+          "36px",
+          {
+            "lineHeight": "44px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "800"
+          }
+        ],
+        "headline-sm": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "15px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-md": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "600"
+          }
+        ],
+        "label-caps": [
+          "11px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.08em",
+            "fontWeight": "700"
+          }
+        ],
+        "display-hero": [
+          "56px",
+          {
+            "lineHeight": "64px",
+            "letterSpacing": "-0.03em",
+            "fontWeight": "800"
+          }
+        ]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(11,25,44,0.06)] border-b border-surface-container-high/60">
+  <div class="h-20 max-w-[1280px] mx-auto px-4 md:px-gutter-lg flex items-center justify-between">
+    <div class="flex items-center gap-space-xl">
+      <a class="flex items-center gap-space-sm" data-path="home" href="../index.html">
+        <img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj">
+      </a>
+      <nav class="hidden lg:flex items-center gap-space-lg">
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a>
+        <div class="relative group flex items-center">
+          <a href="../services_simple_telecalling_support_sevobia/code.html" class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface font-bold transition-colors py-2">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-on-surface transition-transform group-hover:rotate-180">expand_more</span>
+          </a>
+          <div class="absolute top-full left-0 hidden group-hover:flex flex-col min-w-[240px] py-space-sm bg-surface-container-lowest rounded-xl shadow-[0_12px_24px_-6px_rgba(11,25,44,0.12)] border border-surface-container-high/40 z-50">
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../services_simple_telecalling_support_sevobia/code.html">All Services</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Inbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Calling</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../chat_whatsapp_support_sevobia/code.html">Chat &amp; WhatsApp Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../email_support_sevobia/code.html">Email Support</a>
+            <a class="px-space-md py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="../lead_follow_up_sevobia/code.html">Lead Follow-Up</a>
+          </div>
+        </div>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../about_us_sevobia/code.html">About Us</a>
+        <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary hover:text-on-secondary transition-all" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+      <button id="mobile-menu-btn" aria-label="Toggle Mobile Menu" class="lg:hidden p-2 text-on-surface hover:text-secondary-container focus:outline-none">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-surface-container-lowest border-b border-surface-container-high px-4 py-4 space-y-3">
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../index.html">Home</a>
+    <a class="block py-2 font-label-lg text-on-surface font-bold" href="../services_simple_telecalling_support_sevobia/code.html">Services</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../inbound_call_support_simple_telecalling_sevobia/code.html">• Inbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">• Outbound Calling</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../chat_whatsapp_support_sevobia/code.html">• WhatsApp Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../email_support_sevobia/code.html">• Email Support</a>
+    <a class="block py-2 pl-4 text-sm font-label-lg text-on-surface-variant hover:text-secondary-container" href="../lead_follow_up_sevobia/code.html">• Lead Follow-Up</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../about_us_sevobia/code.html">About Us</a>
+    <a class="block py-2 font-label-lg text-on-surface-variant hover:text-on-surface" href="../contact_get_a_quote_sevobia/code.html">Contact / Quote</a>
+    <div class="pt-3 border-t border-surface-container flex flex-col gap-2 sm:hidden">
+      <a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-center shadow-md" href="../contact_get_a_quote_sevobia/code.html">Get Free Consultation</a>
+    </div>
+  </div>
+</header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- 1. Hero Section: Simple, Friendly, Approachable -->
+<section class="relative w-full bg-surface-container-lowest pb-space-2xl pt-space-xl overflow-hidden border-b border-surface-container">
+<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-surface-container-high/40 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-secondary-container/5 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter-lg relative">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-space-md">
+<!-- Friendly Badges -->
+<div class="flex flex-wrap items-center justify-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface text-label-md font-semibold">
+<span class="material-symbols-outlined text-secondary text-base">sentiment_very_satisfied</span>
+          100% Real Friendly Callers
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface text-label-md font-semibold">
+<span class="material-symbols-outlined text-secondary text-base">translate</span>
+          Fluent in English &amp; Hindi
+        </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-bold">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span>
+          Active within 48 Hours
+        </span>
+</div>
+<!-- Headline & Subtitle -->
+<h1 class="font-display-hero text-headline-xl lg:text-display-hero text-on-surface font-extrabold tracking-tight">
+        Simple Calling &amp; Customer Support For Your Business.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        We answer your incoming calls, call back interested buyers, and reply to customer WhatsApps and emails — so you never miss a sale or an inquiry while you focus on running your business.
+      </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-xs">
+<a class="px-space-xl py-3.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all flex items-center gap-2" href="#free-call-box">
+<span class="">Get a Free Callback</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</a>
+<a class="px-space-xl py-3.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg font-bold hover:bg-surface-container-high transition-colors" href="#setup-options">
+          View Simple Plans
+        </a>
+</div>
+<!-- Trust note for Indian businesses -->
+<div class="flex items-center gap-3 pt-space-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> GST Invoices Provided</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> No Long-Term Lock-ins</span>
+<span class="">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Starting ₹9,999/month</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Quick Icon Bar for 5 Services -->
+<section class="w-full bg-surface-container-low py-space-md border-b border-surface-container">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="flex flex-wrap items-center justify-center gap-3 md:gap-space-md">
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-primary transition-all shadow-sm font-label-md text-label-md font-semibold" href="#service-inbound">
+<span class="material-symbols-outlined text-secondary text-base">call</span>
+        1. Answering Inbound Calls
+      </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-primary transition-all shadow-sm font-label-md text-label-md font-semibold" href="#service-lead">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span>
+        2. Calling Back New Leads
+      </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-primary transition-all shadow-sm font-label-md text-label-md font-semibold" href="#service-chat">
+<span class="material-symbols-outlined text-secondary text-base">chat</span>
+        3. WhatsApp &amp; Chat Support
+      </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-primary transition-all shadow-sm font-label-md text-label-md font-semibold" href="#service-outbound">
+<span class="material-symbols-outlined text-secondary text-base">phone_forwarded</span>
+        4. Outbound Calling &amp; Follow-Ups
+      </a>
+<a class="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-primary transition-all shadow-sm font-label-md text-label-md font-semibold" href="#service-booking">
+<span class="material-symbols-outlined text-secondary text-base">calendar_month</span>
+        5. Booking Appointments
+      </a>
+</div>
+</div>
+</section>
+<!-- 3. 5 Detailed & Clear Service Sections -->
+<div class="max-w-[1280px] mx-auto px-gutter-lg py-margin-md flex flex-col gap-space-2xl w-full">
+<!-- Service 1: Incoming Call Answering -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center scroll-mt-28 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm border border-surface-container" id="service-inbound">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-label-md">01</span>
+<span class="text-label-caps font-bold text-secondary uppercase tracking-wider">Never Miss A Customer Call</span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">Incoming Call Answering</h2>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-1">Never miss a customer call again, even when you are busy or out of office.</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        When a customer rings your phone, our trained callers answer politely within 2 rings in your business name. We answer basic questions like your shop hours, pricing, and service details, take down urgent messages, and forward them directly to your WhatsApp.
+      </p>
+<!-- Benefits in bullet points -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex flex-col">
+<span class="material-symbols-outlined text-secondary text-xl">speed</span>
+<span class="font-headline-sm font-bold text-on-surface mt-1">&lt; 20 Seconds</span>
+<span class="font-body-sm text-on-surface-variant">Answered within 2 to 3 rings</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex flex-col">
+<span class="material-symbols-outlined text-secondary text-xl">record_voice_over</span>
+<span class="font-headline-sm font-bold text-on-surface mt-1">Polite Greetings</span>
+<span class="font-body-sm text-on-surface-variant">"Namaste! Thank you for calling..."</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container flex flex-col">
+<span class="material-symbols-outlined text-secondary text-xl">mark_chat_read</span>
+<span class="font-headline-sm font-bold text-on-surface mt-1">WhatsApp Alert</span>
+<span class="font-body-sm text-on-surface-variant">Instant message for every call</span>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('Incoming Call Answering')">
+          Start Answering Calls
+        </button>
+<span class="font-body-sm text-on-surface-variant">Ready to go live in 48 hours</span>
+</div>
+</div>
+<!-- Concrete visual preview -->
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg border border-surface-container-high">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest">
+<span class="font-label-md text-label-md font-bold text-on-surface">Live Example: Call Handling</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-bold text-label-md">Real Scenario</span>
+</div>
+<div class="space-y-space-sm py-space-md text-body-sm">
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm border border-surface-container">
+<div class="font-label-md font-bold text-on-surface flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-sm">ring_volume</span> Step 1: Customer Rings
+          </div>
+<p class="text-on-surface-variant mt-1">"Hi, is your medical diagnostic clinic open on Sunday morning for blood tests?"</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm border border-surface-container">
+<div class="font-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">support_agent</span> Step 2: Sevobia Caller Responds
+          </div>
+<p class="text-on-surface-variant mt-1">"Yes sir, we are open Sunday from 7:30 AM to 1:00 PM. Shall I book an appointment slot for you right now?"</p>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm border border-surface-container">
+<div class="font-label-md font-bold text-on-surface flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-sm">send_to_mobile</span> Step 3: Instant WhatsApp to Owner
+          </div>
+<p class="text-on-surface-variant mt-1">"New appointment booked: Mr. Rahul Sharma, Sunday 9:00 AM. Fasting blood test."</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest text-center font-label-md text-on-surface-variant font-medium">
+        Zero calls missed while you are with clients or patients.
+      </div>
+</div>
+</section>
+<!-- Service 2: Instant Lead Follow-Up -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center scroll-mt-28 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm border border-surface-container" id="service-lead">
+<div class="lg:col-span-5 order-2 lg:order-1 bg-primary-container text-on-primary rounded-xl p-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-highest/20">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase">Speed-to-Lead Timeline</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-primary text-label-md font-bold">5x Higher Sales</span>
+</div>
+<div class="space-y-space-md py-space-md font-body-sm">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high/20 flex items-center justify-center font-bold text-secondary-fixed flex-shrink-0">1</div>
+<div>
+<div class="font-label-md font-bold text-on-primary">Customer Fills Form / Clicks Ad</div>
+<div class="text-on-primary-container text-body-sm">User inquires about your flat, software, or coaching course on Instagram or Google.</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-primary flex-shrink-0">2</div>
+<div>
+<div class="font-label-md font-bold text-on-primary">We Call in Under 5 Minutes</div>
+<div class="text-on-primary-container text-body-sm">Our caller speaks to them while they are still holding their phone and thinking about your offer.</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high/20 flex items-center justify-center font-bold text-secondary-fixed flex-shrink-0">3</div>
+<div>
+<div class="font-label-md font-bold text-on-primary">Warm Transfer to Your Sales Team</div>
+<div class="text-on-primary-container text-body-sm">Customer is verified, interested, and ready to buy. We patch the call directly to you.</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-high/10 rounded-lg text-center text-label-md text-secondary-fixed font-semibold">
+        Leads called within 5 minutes are 21x more likely to convert!
+      </div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-label-md">02</span>
+<span class="text-label-caps font-bold text-secondary uppercase tracking-wider">Fast Response = More Orders</span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">Instant Lead Follow-Up</h2>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-1">Turn website visitors and ad clicks into paying customers before they look elsewhere.</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        If you run Facebook, Instagram, or Google Ads, you know leads go cold fast. When someone fills your website form or inquiries on JustDial/IndiaMART, Sevobia calls them within 5 minutes to verify their need, answer their questions, and pass the hot customer to you.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-secondary">5x Higher</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Deal closing rate compared to calling next day</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Multi-Channel</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Phone call + WhatsApp message if phone is busy</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Verified Data</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Filter out fake inquiries and time-wasters</p>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('Instant Lead Follow-Up')">
+          Boost Your Sales
+        </button>
+<span class="font-body-sm text-on-surface-variant">Connects with Meta Ads, Google Ads &amp; WordPress</span>
+</div>
+</div>
+</section>
+<!-- Service 3: WhatsApp & Live Chat Support -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center scroll-mt-28 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm border border-surface-container" id="service-chat">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-label-md">03</span>
+<span class="text-label-caps font-bold text-secondary uppercase tracking-wider">Fast Chat On Customer Favorites</span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">WhatsApp &amp; Live Chat Support</h2>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-1">Help customers directly on WhatsApp and your website chat widget.</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Indian buyers prefer WhatsApp over long phone calls and emails. Sevobia manages your WhatsApp Business number and website chat, answering product queries, sending PDF catalogs, providing bank/UPI details, and tracking parcel status in seconds.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">&lt; 1 Min</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Average reply time during business hours</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Payment Links</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Share Razorpay, UPI QR &amp; invoice PDFs instantly</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Human Touch</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Polite people, not frustrating robot loops</p>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('WhatsApp &amp; Live Chat Support')">
+          Set Up WhatsApp Support
+        </button>
+<span class="font-body-sm text-on-surface-variant">Works on official WhatsApp Business API</span>
+</div>
+</div>
+<!-- WhatsApp Chat Mockup -->
+<div class="lg:col-span-5 bg-[#e5ddd5]/30 rounded-xl p-space-md border border-surface-container shadow-sm">
+<div class="bg-[#075e54] text-white p-3 rounded-t-xl flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-white text-[#075e54] font-bold flex items-center justify-center text-sm">S</div>
+<div>
+<div class="font-bold text-sm leading-tight">Your Business Store</div>
+<div class="text-[11px] opacity-90">Online • Typically replies in 1 min</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</div>
+<div class="bg-[#efeae2] p-space-md space-y-3 font-body-sm rounded-b-xl min-h-[220px]">
+<!-- Customer message -->
+<div class="flex items-end gap-1">
+<div class="bg-white p-2.5 rounded-lg rounded-bl-none max-w-[80%] shadow-sm text-on-surface">
+<p class="">Namaste! I liked the cotton kurti on your Instagram page. What is the final price for size L?</p>
+<div class="text-[10px] text-right text-on-surface-variant mt-1">11:42 AM</div>
+</div>
+</div>
+<!-- Agent reply -->
+<div class="flex items-end justify-end gap-1">
+<div class="bg-[#dcf8c6] p-2.5 rounded-lg rounded-br-none max-w-[85%] shadow-sm text-on-surface">
+<p class="">Hello ji! Yes, Size L is in stock. The price is <strong>₹1,499</strong> including free shipping across India. Should I send you the UPI payment link?</p>
+<div class="text-[10px] text-right text-on-surface-variant mt-1 flex items-center justify-end gap-1">
+<span class="">11:43 AM</span>
+<span class="material-symbols-outlined text-[13px] text-blue-500">done_all</span>
+</div>
+</div>
+</div>
+<div class="text-center">
+<span class="px-2 py-1 rounded bg-white/80 text-[11px] font-semibold text-secondary-container shadow-xs">
+            Payment link sent • Order confirmed in 2 mins
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Service 4: Outbound Calling & Follow-Ups -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center scroll-mt-28 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm border border-surface-container" id="service-outbound">
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg border border-surface-container-high order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase">Everyday Use Cases</span>
+<h3 class="font-headline-sm font-bold text-on-surface mt-1 mb-3">What We Call For:</h3>
+<div class="space-y-2.5 font-body-sm text-on-surface">
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">autorenew</span>
+<div>
+<div class="font-bold text-on-surface">Policy &amp; AMC Renewals</div>
+<div class="text-on-surface-variant text-body-sm">Reminding bike/car insurance &amp; software renewal dates.</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">receipt_long</span>
+<div>
+<div class="font-bold text-on-surface">Gentle Payment Reminders</div>
+<div class="text-on-surface-variant text-body-sm">Polite follow-up on overdue invoices without burning relations.</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">campaign</span>
+<div>
+<div class="font-bold text-on-surface">Festival Offers &amp; Discounts</div>
+<div class="text-on-surface-variant text-body-sm">Informing past customers about Diwali or seasonal sales.</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-2.5 bg-surface-container-lowest rounded-lg text-center font-label-md text-on-surface-variant">
+        Daily report sent to you in Excel or Google Sheets by 6:00 PM.
+      </div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-label-md">04</span>
+<span class="text-label-caps font-bold text-secondary uppercase tracking-wider">Turn Phone Numbers Into Business</span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">Outbound Calling &amp; Follow-Ups</h2>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-1">We call your list of existing clients and fresh prospects with respect and care.</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Got a list of past buyers, trade show contacts, or pending payments? Don't leave money on the table. Our callers speak respectfully in fluent Hindi or English, conduct warm follow-ups, and update notes clearly so you know exactly who is interested.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">100+ Calls</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Polite calls made per caller every single day</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Daily Report</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Clear call outcomes sent every evening</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">No Spammy Talk</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Respectful tone that protects your brand name</p>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('Outbound Calling &amp; Follow-ups')">
+          Start Calling Today
+        </button>
+<span class="font-body-sm text-on-surface-variant">Provide an Excel sheet and we start dialing</span>
+</div>
+</div>
+</section>
+<!-- Service 5: Easy Appointment Scheduling -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center scroll-mt-28 bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-xl shadow-sm border border-surface-container" id="service-booking">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center text-label-md">05</span>
+<span class="text-label-caps font-bold text-secondary uppercase tracking-wider">Book More Meetings</span>
+</div>
+<div>
+<h2 class="font-headline-xl text-headline-lg lg:text-headline-xl text-on-surface font-bold">Easy Appointment Scheduling</h2>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-1">Fill your calendar with genuine, qualified client meetings.</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Whether you are a financial advisor, doctor, real estate broker, or interior designer, your time is best spent speaking with serious clients. We check budget and requirements, book the meeting directly into your Google Calendar, and send reminder WhatsApps so clients don't forget to show up.
+      </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-secondary">90%+</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Meeting show-up rate with our WhatsApp reminder alerts</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Direct Sync</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Books straight to Google Calendar, Zoom, or diary</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
+<span class="font-headline-sm font-bold text-on-surface">Pre-Screened</span>
+<p class="font-body-sm text-on-surface-variant mt-1">We ask 2-3 key questions before confirming</p>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-md">
+<button class="px-space-lg py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('Appointment Scheduling')">
+          Get Meetings Booked
+        </button>
+<span class="font-body-sm text-on-surface-variant">Ideal for clinics, consultants &amp; realtors</span>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-high/40 rounded-xl p-space-lg border border-surface-container">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm border border-surface-container space-y-3">
+<div class="flex items-center justify-between border-b border-surface-container pb-2">
+<span class="font-label-md font-bold text-on-surface">Confirmed Calendar Event</span>
+<span class="px-2 py-0.5 rounded bg-green-100 text-green-800 font-bold text-xs">Confirmed</span>
+</div>
+<div class="font-headline-sm font-bold text-on-surface">Site Visit &amp; 3BHK Consultation</div>
+<div class="space-y-1 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">calendar_today</span> Friday, 3:30 PM - 4:15 PM</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">person</span> Buyer: Mr. Rajesh Aggarwal (Gurugram)</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-secondary">currency_rupee</span> Budget: ₹1.5 Cr – ₹2.0 Cr (Pre-verified)</div>
+</div>
+<div class="p-2 bg-surface-container-low rounded text-xs text-on-surface-variant">
+          Reminder WhatsApp sent automatically 2 hours prior to meeting.
+        </div>
+</div>
+</div>
+</section>
+</div>
+<!-- 4. Simple Model Comparison: Which Setup Fits You? -->
+<section class="w-full bg-surface-container-low py-margin-lg border-y border-surface-container" id="setup-options">
+<div class="max-w-[1280px] mx-auto px-gutter-lg">
+<div class="text-center max-w-2xl mx-auto mb-space-xl flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Straightforward Pricing Options</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">Which Setup Fits Your Business?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        No confusing tiers or technical buzzwords. Pick how you want your callers deployed.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg max-w-4xl mx-auto">
+<!-- Option A: Shared Team -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm border border-surface-container flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface text-label-md font-bold">Option A</span>
+<span class="text-secondary font-bold text-label-md">Most Popular For New Starters</span>
+</div>
+<h3 class="font-headline-lg font-bold text-on-surface">Shared Caller Team</h3>
+<div class="font-headline-sm font-bold text-on-surface text-secondary">
+            Pay Only For What You Use
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Perfect for startups, independent clinics, and small retail shops who receive 10 to 50 calls a day and don't need a caller sitting full-time.
+          </p>
+<ul class="space-y-2 text-body-sm text-on-surface pt-2">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Zero fixed employee salary or PF burden
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Trained callers answer during your business hours
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              WhatsApp summaries for every single incoming call
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Pause or upgrade anytime with 7 days notice
+            </li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-3 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg font-bold hover:bg-surface-container-high transition-colors" onclick="openScopeModal('Shared Caller Team')">
+            Choose Shared Setup
+          </button>
+</div>
+</div>
+<!-- Option B: Dedicated Full-Time Caller -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md border-2 border-secondary-container flex flex-col justify-between relative">
+<div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-secondary-container text-on-primary text-xs font-bold uppercase tracking-wider">
+          Best Value
+        </div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-md font-bold">Option B</span>
+<span class="text-on-surface-variant text-label-md">For Growing Brands</span>
+</div>
+<h3 class="font-headline-lg font-bold text-on-surface">Dedicated Full-Time Caller</h3>
+<div class="font-headline-sm font-bold text-on-surface text-secondary">
+            Your Own Exclusive Staff Member
+          </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            A dedicated telecaller who works 8 hours a day exclusively for your company. They learn your exact products, talk in your specific tone, and call your leads.
+          </p>
+<ul class="space-y-2 text-body-sm text-on-surface pt-2">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              100% focused on your business (no other clients)
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Direct communication with you via WhatsApp group
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Handles calls, WhatsApp chat, and follow-ups daily
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+              Free replacement caller if your agent takes leave
+            </li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-3 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all" onclick="openScopeModal('Dedicated Full-Time Caller')">
+            Get Your Dedicated Caller
+          </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Clear, Jargon-Free FAQ Section -->
+<section class="max-w-[960px] mx-auto px-gutter-lg py-margin-lg w-full">
+<div class="text-center mb-space-xl">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Common Questions</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Simple answers to what Indian business owners ask us most.</p>
+</div>
+<div class="space-y-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
+<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">help</span>
+        How fast can we start?
+      </h3>
+<p class="font-body-md text-on-surface-variant mt-2 pl-6">
+        Within 2 to 3 days! We hold a simple 30-minute call with you to understand how you want your phone answered, test the scripts, and start taking your calls immediately.
+      </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
+<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">help</span>
+        Which languages do your callers speak?
+      </h3>
+<p class="font-body-md text-on-surface-variant mt-2 pl-6">
+        All our callers are completely fluent in both Hindi and English. If your business requires regional languages like Marathi, Gujarati, Tamil, Telugu, or Bengali, we have dedicated regional speakers available upon request.
+      </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
+<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">help</span>
+        Do you provide call recordings?
+      </h3>
+<p class="font-body-md text-on-surface-variant mt-2 pl-6">
+        Yes, 100% of incoming and outgoing calls are recorded for quality checks. You receive online access to listen to any call anytime you like.
+      </p>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
+<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">help</span>
+        Is there any long contract or lock-in?
+      </h3>
+<p class="font-body-md text-on-surface-variant mt-2 pl-6">
+        None at all. You can pay month-to-month. If your business needs change, you can pause, upgrade, or cancel your plan anytime without penalties.
+      </p>
+</div>
+</div>
+</section>
+<!-- 6. Friendly Request a Sample Call Box -->
+<section class="max-w-[1280px] mx-auto px-gutter-lg pb-margin-lg w-full" id="free-call-box">
+<div class="bg-primary-container text-on-primary rounded-xl p-space-xl lg:p-space-2xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left side note -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-wider font-bold">Hear The Quality Yourself</span>
+<h2 class="font-headline-xl text-headline-xl font-extrabold text-on-primary">
+          Want to hear how we sound? Request a free sample call today.
+        </h2>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+          Fill your number below. One of our professional, friendly callers will ring you back within 15 minutes, introduce themselves politely, and explain how we can support your business. No pressure, no obligations.
+        </p>
+<div class="space-y-2 pt-space-xs text-body-sm text-on-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="">Free 15-minute consultation with zero commitment</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="">GST compliant tax invoices for all Indian businesses</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="">Immediate setup assistance on call</span>
+</div>
+</div>
+</div>
+<!-- Right side simple form -->
+<div class="lg:col-span-6 bg-surface-container-lowest text-on-surface rounded-xl p-space-lg lg:p-space-xl shadow-lg">
+<form class="space-y-space-md" id="sampleCallForm" onsubmit="handleSampleSubmit(event)">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Your Full Name:</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none focus:border-secondary" placeholder="e.g. Vikram Mehta" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Mobile / WhatsApp Number:</label>
+<div class="flex">
+<span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-outline-variant bg-surface-container font-body-sm text-on-surface font-semibold">+91</span>
+<input class="w-full h-11 px-3 rounded-r-lg bg-surface-container-low border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none focus:border-secondary" placeholder="98765 43210" required="" type="tel">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Your Business Type:</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none">
+<option>Retail &amp; E-Commerce Shop</option>
+<option>Real Estate &amp; Construction</option>
+<option>Doctor Clinic &amp; Diagnostic Centre</option>
+<option>Coaching, School or EdTech</option>
+<option>Software / IT Agency</option>
+<option>Financial Services &amp; Insurance</option>
+<option>Other Business</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Which service do you need first?</label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none">
+<option>Incoming Call Answering</option>
+<option>Calling Back New Leads Quickly</option>
+<option>WhatsApp &amp; Live Chat Support</option>
+<option>Outbound Calling (Renewals / Invoices)</option>
+<option>Booking Appointments</option>
+</select>
+</div>
+<div class="pt-1">
+<button class="w-full h-12 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold shadow-[0_4px_14px_0_rgba(255,106,0,0.35)] hover:bg-secondary transition-all flex items-center justify-center gap-2" type="submit">
+<span class="">Request a Free Sample Call</span>
+<span class="material-symbols-outlined">call</span>
+</button>
+</div>
+<div class="hidden p-3 rounded-lg bg-green-50 text-green-800 text-body-sm font-semibold text-center border border-green-200" id="sampleSuccess">
+            Dhanyawad! We will call you on your mobile number in under 15 minutes.
+          </div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Modal Backdrop for Direct Service Inquiries -->
+<div class="fixed inset-0 z-50 bg-primary-container/70 backdrop-blur-sm hidden flex items-center justify-center p-gutter" id="serviceScopeModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-xl shadow-2xl relative">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="closeScopeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex flex-col gap-space-xs mb-space-md">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Fast Callback</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface" id="modalServiceTitle">Inquire About Service</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tell us where to call you and we will help you get started.</p>
+</div>
+<form class="space-y-space-sm" onsubmit="handleModalSubmit(event)">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Your Name or Business Name:</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none" placeholder="e.g. Apex Diagnostics" required="" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Mobile / WhatsApp Number:</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none" placeholder="+91 98765 43210" required="" type="tel">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1">Preferred Setup:</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container border border-outline-variant font-body-sm text-body-sm text-on-surface outline-none">
+<option>Shared Team (Flexible hours)</option>
+<option>Dedicated Full-Time Caller (8 hours daily)</option>
+<option>Not sure, guide me on call</option>
+</select>
+</div>
+<div class="pt-2">
+<button class="w-full h-11 rounded-lg bg-secondary-container text-on-primary font-label-lg text-label-lg font-bold hover:bg-secondary transition-all" type="submit">
+          Request Free Callback
+        </button>
+</div>
+<div class="hidden text-center text-secondary font-label-md text-label-md font-bold pt-2" id="modalSuccess">
+        Thank you! Our support director will call you shortly.
+      </div>
+</form>
+</div>
+</div>
+<script>
+  function openScopeModal(serviceName) {
+    document.getElementById('modalServiceTitle').textContent = serviceName;
+    document.getElementById('serviceScopeModal').classList.remove('hidden');
+  }
+
+  function closeScopeModal() {
+    document.getElementById('serviceScopeModal').classList.add('hidden');
+    document.getElementById('modalSuccess').classList.add('hidden');
+  }
+
+  function handleSampleSubmit(e) {
+    e.preventDefault();
+    const successEl = document.getElementById('sampleSuccess');
+    successEl.classList.remove('hidden');
+    setTimeout(() => {
+      e.target.reset();
+    }, 1500);
+  }
+
+  function handleModalSubmit(e) {
+    e.preventDefault();
+    const modalSuccess = document.getElementById('modalSuccess');
+    modalSuccess.classList.remove('hidden');
+    setTimeout(() => {
+      closeScopeModal();
+    }, 1800);
+  }
+</script>
+</div></main><footer class="w-full bg-primary-container text-on-primary-fixed-variant pt-margin-lg pb-margin-md"><div class="max-w-[1280px] mx-auto px-gutter-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><a href="../index.html"><img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj"></a></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">Friendly calling and customer support for Indian businesses. We answer your calls, respond to WhatsApp chats, and follow up with interested buyers so you never miss another customer.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">100% Real Callers</span><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">GST Invoices</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Our Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Incoming Call Answering</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../lead_follow_up_sevobia/code.html">Instant Lead Follow-Up</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../chat_whatsapp_support_sevobia/code.html">WhatsApp &amp; Live Chat</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Follow-Ups</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../email_support_sevobia/code.html">Email Support</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Company &amp; Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../index.html">Home Page</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../about_us_sevobia/code.html">About Us</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Get a Quote</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Quick Callback</span><p class="font-body-sm text-body-sm text-on-primary-container">Enter your phone number to get a prompt callback from our team.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-lowest overflow-hidden p-1"><input class="w-full px-space-sm py-1.5 text-on-surface bg-transparent outline-none font-body-sm text-body-sm" placeholder="+91 Mobile number" type="tel"><a href="../contact_get_a_quote_sevobia/code.html" class="px-space-md py-1.5 rounded bg-secondary-container text-on-primary font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors font-bold inline-flex items-center justify-center">Call</a></div><span class="font-label-md text-label-md text-on-primary-container">Toll-free or WhatsApp support: +91 98700-SEVOBIA</span></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container"><p class="">© 2025 Sevobia Support Services India Pvt. Ltd. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Privacy Policy</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Terms of Service</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">GST &amp; Invoicing</a></div></div></div></footer>
+
+<script>document.getElementById("mobile-menu-btn")?.addEventListener("click", function(){ var m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("hidden"); });</script></body></html>
