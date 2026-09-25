@@ -221,7 +221,7 @@
   <div class="h-20 max-w-[1280px] mx-auto px-4 md:px-gutter-lg flex items-center justify-between">
     <div class="flex items-center gap-space-xl">
       <a class="flex items-center gap-space-sm" data-path="home" href="../index.html">
-        <img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj">
+        <img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="../images/sevobia-logo.png">
       </a>
       <nav class="hidden lg:flex items-center gap-space-lg">
         <a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" href="../index.html">Home</a>
@@ -559,32 +559,50 @@
 <div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg border border-surface-container-high order-2 lg:order-1">
 <span class="font-label-caps text-label-caps text-secondary font-bold uppercase">Everyday Use Cases</span>
 <h3 class="font-headline-sm font-bold text-on-surface mt-1 mb-3">What We Call For:</h3>
-<div class="space-y-2.5 font-body-sm text-on-surface">
-<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary">autorenew</span>
+<div class="space-y-3 font-body-sm text-on-surface">
+<!-- Priority 1: Sales Conversion -->
+<div class="p-3 bg-surface-container-lowest rounded-xl border-2 border-secondary-container/50 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-secondary-container/10 text-secondary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">trending_up</span>
+</div>
 <div>
-<div class="font-bold text-on-surface">Policy &amp; AMC Renewals</div>
-<div class="text-on-surface-variant text-body-sm">Reminding bike/car insurance &amp; software renewal dates.</div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-on-surface text-base">Sales Conversion</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-primary text-[10px] font-bold uppercase tracking-wider">Top Priority</span>
+</div>
+<p class="text-on-surface-variant text-body-sm mt-1 leading-relaxed">
+Direct customer outreach to drive business sales. We contact and convert existing leads already in your system or fresh inquiries provided by you.
+</p>
 </div>
 </div>
-<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary">receipt_long</span>
+<!-- Grouped: Others -->
+<div class="pt-1">
+<span class="font-label-caps text-[11px] text-on-surface-variant font-bold uppercase tracking-wider block mb-2 px-1">Others</span>
+<div class="space-y-2">
+<div class="p-2.5 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">autorenew</span>
 <div>
-<div class="font-bold text-on-surface">Gentle Payment Reminders</div>
-<div class="text-on-surface-variant text-body-sm">Polite follow-up on overdue invoices without burning relations.</div>
+<div class="font-bold text-on-surface text-xs sm:text-sm">Policy &amp; AMC Renewals</div>
+<div class="text-on-surface-variant text-[11px] sm:text-xs">Reminding bike/car insurance &amp; software renewal dates.</div>
 </div>
 </div>
-<div class="p-3 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
-<span class="material-symbols-outlined text-secondary">campaign</span>
+<div class="p-2.5 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">receipt_long</span>
 <div>
-<div class="font-bold text-on-surface">Festival Offers &amp; Discounts</div>
-<div class="text-on-surface-variant text-body-sm">Informing past customers about Diwali or seasonal sales.</div>
+<div class="font-bold text-on-surface text-xs sm:text-sm">Gentle Payment Reminders</div>
+<div class="text-on-surface-variant text-[11px] sm:text-xs">Polite follow-up on overdue invoices without burning relations.</div>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container-lowest rounded-lg border border-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">campaign</span>
+<div>
+<div class="font-bold text-on-surface text-xs sm:text-sm">Festival Offers &amp; Discounts</div>
+<div class="text-on-surface-variant text-[11px] sm:text-xs">Informing past customers about Diwali or seasonal sales.</div>
 </div>
 </div>
 </div>
-<div class="mt-space-md p-2.5 bg-surface-container-lowest rounded-lg text-center font-label-md text-on-surface-variant">
-        Daily report sent to you in Excel or Google Sheets by 6:00 PM.
-      </div>
+</div>
+</div>
 </div>
 <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-space-md">
 <div class="flex items-center gap-2">
@@ -604,8 +622,8 @@
 <p class="font-body-sm text-on-surface-variant mt-1">Polite calls made per caller every single day</p>
 </div>
 <div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
-<span class="font-headline-sm font-bold text-on-surface">Daily Report</span>
-<p class="font-body-sm text-on-surface-variant mt-1">Clear call outcomes sent every evening</p>
+<span class="font-headline-sm font-bold text-on-surface">Sales Driven</span>
+<p class="font-body-sm text-on-surface-variant mt-1">Focused pitches to convert leads into revenue</p>
 </div>
 <div class="p-space-sm rounded-lg bg-surface-container-low border border-surface-container">
 <span class="font-headline-sm font-bold text-on-surface">No Spammy Talk</span>
@@ -769,52 +787,6 @@
 </div>
 </div>
 </section>
-<!-- 5. Clear, Jargon-Free FAQ Section -->
-<section class="max-w-[960px] mx-auto px-gutter-lg py-margin-lg w-full">
-<div class="text-center mb-space-xl">
-<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Common Questions</span>
-<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold mt-1">Frequently Asked Questions</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">Simple answers to what Indian business owners ask us most.</p>
-</div>
-<div class="space-y-space-md">
-<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
-<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-base">help</span>
-        How fast can we start?
-      </h3>
-<p class="font-body-md text-on-surface-variant mt-2 pl-6">
-        Within 2 to 3 days! We hold a simple 30-minute call with you to understand how you want your phone answered, test the scripts, and start taking your calls immediately.
-      </p>
-</div>
-<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
-<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-base">help</span>
-        Which languages do your callers speak?
-      </h3>
-<p class="font-body-md text-on-surface-variant mt-2 pl-6">
-        All our callers are completely fluent in both Hindi and English. If your business requires regional languages like Marathi, Gujarati, Tamil, Telugu, or Bengali, we have dedicated regional speakers available upon request.
-      </p>
-</div>
-<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
-<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-base">help</span>
-        Do you provide call recordings?
-      </h3>
-<p class="font-body-md text-on-surface-variant mt-2 pl-6">
-        Yes, 100% of incoming and outgoing calls are recorded for quality checks. You receive online access to listen to any call anytime you like.
-      </p>
-</div>
-<div class="p-space-md bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs">
-<h3 class="font-headline-sm text-on-surface font-bold flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-base">help</span>
-        Is there any long contract or lock-in?
-      </h3>
-<p class="font-body-md text-on-surface-variant mt-2 pl-6">
-        None at all. You can pay month-to-month. If your business needs change, you can pause, upgrade, or cancel your plan anytime without penalties.
-      </p>
-</div>
-</div>
-</section>
 <!-- 6. Friendly Request a Sample Call Box -->
 <section class="max-w-[1280px] mx-auto px-gutter-lg pb-margin-lg w-full" id="free-call-box">
 <div class="bg-primary-container text-on-primary rounded-xl p-space-xl lg:p-space-2xl shadow-xl">
@@ -961,6 +933,6 @@
     }, 1800);
   }
 </script>
-</div></main><footer class="w-full bg-primary-container text-on-primary-fixed-variant pt-margin-lg pb-margin-md"><div class="max-w-[1280px] mx-auto px-gutter-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><a href="../index.html"><img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1UMfnz18FsDK-sKq-1swGFcVzjD3NAEWLc4JyctjXwbqyd37T0BRMjaysdfJZknk7QnofdP0lxTMuh9w_DwImwcCm_hBp3nC00-Kb7NJjDNo77Jx3Xud7BlSV0S-ytmw8JxTY1n2j70IqMGbW0CzvUh8smbgjZSInpDte5B83Fy7YTJnokJIUbVZqWDHDJZYtaGuS8PX7I54v3ucUfNiZuKXLPXEyIj8QTLAO4MJN8PYxKTp0x1eCydi3pj"></a></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">Friendly calling and customer support for Indian businesses. We answer your calls, respond to WhatsApp chats, and follow up with interested buyers so you never miss another customer.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">100% Real Callers</span><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">GST Invoices</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Our Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Incoming Call Answering</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../lead_follow_up_sevobia/code.html">Instant Lead Follow-Up</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../chat_whatsapp_support_sevobia/code.html">WhatsApp &amp; Live Chat</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Follow-Ups</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../email_support_sevobia/code.html">Email Support</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Company &amp; Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../index.html">Home Page</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../about_us_sevobia/code.html">About Us</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Get a Quote</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Quick Callback</span><p class="font-body-sm text-body-sm text-on-primary-container">Enter your phone number to get a prompt callback from our team.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-lowest overflow-hidden p-1"><input class="w-full px-space-sm py-1.5 text-on-surface bg-transparent outline-none font-body-sm text-body-sm" placeholder="+91 Mobile number" type="tel"><a href="../contact_get_a_quote_sevobia/code.html" class="px-space-md py-1.5 rounded bg-secondary-container text-on-primary font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors font-bold inline-flex items-center justify-center">Call</a></div><span class="font-label-md text-label-md text-on-primary-container">Toll-free or WhatsApp support: +91 98700-SEVOBIA</span></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container"><p class="">© 2025 Sevobia Support Services India Pvt. Ltd. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Privacy Policy</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Terms of Service</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">GST &amp; Invoicing</a></div></div></div></footer>
+</div></main><footer class="w-full bg-primary-container text-on-primary-fixed-variant pt-margin-lg pb-margin-md"><div class="max-w-[1280px] mx-auto px-gutter-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-lg pb-space-2xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><a href="../index.html"><img alt="Sevobia" class="h-8 md:h-9 w-auto object-contain" src="../images/sevobia-logo-white.png"></a></div><p class="font-body-md text-body-md text-on-primary-container max-w-sm">Friendly calling and customer support for Indian businesses. We answer your calls, respond to WhatsApp chats, and follow up with interested buyers so you never miss another customer.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">100% Real Callers</span><span class="px-3 py-1 rounded-full bg-surface-container-high/10 text-on-primary text-label-md font-label-md">GST Invoices</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Our Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../inbound_call_support_simple_telecalling_sevobia/code.html">Incoming Call Answering</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../lead_follow_up_sevobia/code.html">Instant Lead Follow-Up</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../chat_whatsapp_support_sevobia/code.html">WhatsApp &amp; Live Chat</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../outbound_calling_dedicated_telecalling_support_sevobia/code.html">Outbound Follow-Ups</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../email_support_sevobia/code.html">Email Support</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Company &amp; Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-primary-container"><li class=""><a class="hover:text-on-primary transition-colors" href="../index.html">Home Page</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../about_us_sevobia/code.html">About Us</a></li><li class=""><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Get a Quote</a></li></ul></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-primary">Quick Callback</span><p class="font-body-sm text-body-sm text-on-primary-container">Enter your phone number to get a prompt callback from our team.</p><div class="flex flex-col gap-space-xs"><div class="flex items-center rounded-lg bg-surface-container-lowest overflow-hidden p-1"><input class="w-full px-space-sm py-1.5 text-on-surface bg-transparent outline-none font-body-sm text-body-sm" placeholder="+91 Mobile number" type="tel"><a href="../contact_get_a_quote_sevobia/code.html" class="px-space-md py-1.5 rounded bg-secondary-container text-on-primary font-label-md text-label-md hover:bg-secondary hover:text-on-secondary transition-colors font-bold inline-flex items-center justify-center">Call</a></div><span class="font-label-md text-label-md text-on-primary-container"><a href="tel:+919946626699" class="hover:text-secondary-fixed transition-colors font-bold text-on-primary">+91 9946626699</a> • <a href="mailto:support@sevobia.com" class="hover:underline">support@sevobia.com</a></span></div></div></div><div class="pt-space-xl flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-primary-container"><p class="">© 2025 Sevobia Support Services India Pvt. Ltd. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Privacy Policy</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">Terms of Service</a><a class="hover:text-on-primary transition-colors" href="../contact_get_a_quote_sevobia/code.html">GST &amp; Invoicing</a></div></div></div></footer>
 
 <script>document.getElementById("mobile-menu-btn")?.addEventListener("click", function(){ var m=document.getElementById("mobile-menu"); if(m) m.classList.toggle("hidden"); });</script></body></html>
